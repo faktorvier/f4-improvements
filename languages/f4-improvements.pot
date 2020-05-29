@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: F4 Improvements\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-29 10:04+0000\n"
+"POT-Creation-Date: 2020-05-29 12:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,31 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.3.1; wp-5.3.2"
-
-#: modules/System/Hooks.php:77
-msgid "System"
-msgstr ""
-
-#: modules/System/Hooks.php:93
-msgid "Updates"
-msgstr ""
-
-#: modules/System/Hooks.php:98
-msgid "Security"
-msgstr ""
-
-#: modules/System/Hooks.php:143
-msgid "Disable Core Update Email"
-msgstr ""
-
-#: modules/System/Hooks.php:151
-msgid "Disable XML-RPC"
-msgstr ""
-
-#: modules/System/Hooks.php:158
-msgid "Disable Theme Editor"
-msgstr ""
+"X-Loco-Version: 2.3.4; wp-5.4.1"
 
 #: modules/Backend/Hooks.php:72
 msgid "Back end"
@@ -89,38 +65,6 @@ msgstr ""
 
 #: modules/Backend/Hooks.php:253
 msgid "Remove \"Activity\""
-msgstr ""
-
-#: modules/Media/Hooks.php:96
-msgid "Media"
-msgstr ""
-
-#: modules/Media/Hooks.php:112
-msgid "Media Library"
-msgstr ""
-
-#: modules/Media/Hooks.php:177
-msgid "Change JPEG Quality"
-msgstr ""
-
-#: modules/Media/Hooks.php:185
-msgid "Enable SVG Support"
-msgstr ""
-
-#: modules/Media/Hooks.php:192
-msgid "Allow image upscaling"
-msgstr ""
-
-#: modules/Media/Hooks.php:199
-msgid "Normalize Upload Filename"
-msgstr ""
-
-#: modules/Media/Hooks.php:206
-msgid "Use title as alt attribute on upload"
-msgstr ""
-
-#: modules/Media/Hooks.php:220
-msgid "Remove default image sizes"
 msgstr ""
 
 #: modules/Frontend/Hooks.php:117
@@ -189,6 +133,62 @@ msgstr ""
 
 #: modules/Frontend/Hooks.php:324
 msgid "Hide Admin Toolbar"
+msgstr ""
+
+#: modules/Media/Hooks.php:96
+msgid "Media"
+msgstr ""
+
+#: modules/Media/Hooks.php:112
+msgid "Media Library"
+msgstr ""
+
+#: modules/Media/Hooks.php:177
+msgid "Change JPEG Quality"
+msgstr ""
+
+#: modules/Media/Hooks.php:185
+msgid "Enable SVG Support"
+msgstr ""
+
+#: modules/Media/Hooks.php:192
+msgid "Allow image upscaling"
+msgstr ""
+
+#: modules/Media/Hooks.php:199
+msgid "Normalize Upload Filename"
+msgstr ""
+
+#: modules/Media/Hooks.php:206
+msgid "Use title as alt attribute on upload"
+msgstr ""
+
+#: modules/Media/Hooks.php:220
+msgid "Remove default image sizes"
+msgstr ""
+
+#: modules/System/Hooks.php:77
+msgid "System"
+msgstr ""
+
+#: modules/System/Hooks.php:93
+msgid "Updates"
+msgstr ""
+
+#: modules/System/Hooks.php:98
+msgid "Security"
+msgstr ""
+
+#: modules/System/Hooks.php:143
+msgid "Disable Core Update Email"
+msgstr ""
+
+#: modules/System/Hooks.php:151
+msgid "Disable XML-RPC"
+msgstr ""
+
+#: modules/System/Hooks.php:158
+msgid "Disable Theme Editor"
 msgstr ""
 
 #: modules/Core/Options/Hooks.php:118

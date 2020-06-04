@@ -56,6 +56,11 @@ class Hooks {
 		add_action('current_screen', __NAMESPACE__ . '\\Hooks::disable_editor_features');
 		add_filter('use_block_editor_for_post', __NAMESPACE__ . '\\Hooks::disable_gutenberg_post_types', 99, 2);
 
+		if(Options::get('keep_tax_checklist_hierarchy')) {
+			add_filter('wp_terms_checklist_args', __NAMESPACE__ . '\\Hooks::keep_tax_checklist_hierarchy', 99);
+			add_action('admin_footer', __NAMESPACE__ . '\\Hooks::add_checklist_hierarchy_script');
+		}
+
 		// Dashboard
 		add_action('wp_dashboard_setup', __NAMESPACE__ . '\\Hooks::remove_dashboard_widgets');
 	}
@@ -88,9 +93,9 @@ class Hooks {
 			'title' => __('Appearance', 'f4-improvements')
 		];
 
-		$sections['backend-editor'] = [
+		$sections['backend-content'] = [
 			'tab' => 'backend',
-			'title' => __('Editor', 'f4-improvements')
+			'title' => __('Content', 'f4-improvements')
 		];
 
 		$sections['backend-dashboard'] = [
@@ -126,6 +131,10 @@ class Hooks {
 		$settings['disable_gutenberg'] = [
 			'default' => [],
 			'type' => 'array'
+		];
+
+		$settings['keep_tax_checklist_hierarchy'] = [
+			'default' => 'default'
 		];
 
 		$settings['remove_dashboard_welcome'] = [
@@ -181,21 +190,21 @@ class Hooks {
 			'type' => 'select',
 			'label' => __('Default Color Scheme', 'f4-improvements'),
 			'options' => [
-				'default' => 'Default',
-				'light' => 'Light',
-				'blue' =>  'Blue',
-				'coffee' => 'Coffee',
-				'ectoplasm' => 'Ectoplasm',
-				'midnight' => 'Midnight',
-				'ocean' => 'Ocean',
-				'sunrise' => 'Sunrise'
+				'default' => __('Default', 'f4-improvements'),
+				'light' => __('Light', 'f4-improvements'),
+				'blue' =>  __('Blue', 'f4-improvements'),
+				'coffee' => __('Coffee', 'f4-improvements'),
+				'ectoplasm' => __('Ectoplasm', 'f4-improvements'),
+				'midnight' => __('Midnight', 'f4-improvements'),
+				'ocean' => __('Ocean', 'f4-improvements'),
+				'sunrise' => __('Sunrise', 'f4-improvements')
 			]
 		];
 
-		// Register editor fields
+		// Register content fields
 		$fields['disable_editor'] = [
 			'tab' => 'backend',
-			'section' => 'backend-editor',
+			'section' => 'backend-content',
 			'type' => 'checkboxes',
 			'label' => __('Disable WYSIWYG', 'f4-improvements'),
 			'options' => $post_types
@@ -203,7 +212,7 @@ class Hooks {
 
 		$fields['disable_editor_media'] = [
 			'tab' => 'backend',
-			'section' => 'backend-editor',
+			'section' => 'backend-content',
 			'type' => 'checkboxes',
 			'label' => __('Disable WYSIWYG Media', 'f4-improvements'),
 			'options' => $post_types
@@ -211,10 +220,17 @@ class Hooks {
 
 		$fields['disable_gutenberg'] = [
 			'tab' => 'backend',
-			'section' => 'backend-editor',
+			'section' => 'backend-content',
 			'type' => 'checkboxes',
 			'label' => __('Disable Gutenberg', 'f4-improvements'),
 			'options' => $post_types
+		];
+
+		$fields['keep_tax_checklist_hierarchy'] = [
+			'tab' => 'backend',
+			'section' => 'backend-content',
+			'type' => 'checkbox',
+			'label' => __('Keep Taxonomy Checklist Hierarchy', 'f4-improvements')
 		];
 
 		// Register dashboard fields
@@ -290,6 +306,44 @@ class Hooks {
 		}
 
 		return $use;
+	}
+
+	/**
+	 * Keep the hierarchy for taxonomy checklists
+	 *
+	 * @since 1.1.0
+	 * @access public
+	 * @static
+	 */
+	public static function keep_tax_checklist_hierarchy($args) {
+		$args['checked_ontop'] = false;
+		return $args;
+	}
+
+	/**
+	 * Add script to jump to selected term in taxonomy checklist
+	 *
+	 * @since 1.1.0
+	 * @access public
+	 * @static
+	 */
+	public static function add_checklist_hierarchy_script() {
+		echo '
+			<script>
+				jQuery(function() {
+					jQuery("[id$=\'-all\'] > ul.categorychecklist").each(function() {
+						var $list = jQuery(this);
+						var $checked = $list.find(":checkbox:checked").first();
+
+						if($checked.length) {
+							var firstElementTop = $list.find(":checkbox").position().top;
+							var firstCheckedTop = $checked.position().top;
+							$list.closest(".tabs-panel").scrollTop(firstCheckedTop - firstElementTop + 5);
+						}
+					});
+				});
+			</script>
+		';
 	}
 
 	/**

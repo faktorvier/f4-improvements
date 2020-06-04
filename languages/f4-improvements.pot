@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: F4 Improvements\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-29 12:05+0000\n"
+"POT-Creation-Date: 2020-06-04 13:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,55 +15,91 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.3.4; wp-5.4.1"
 
-#: modules/Backend/Hooks.php:72
+#: modules/Backend/Hooks.php:77
 msgid "Back end"
 msgstr ""
 
-#: modules/Backend/Hooks.php:88
+#: modules/Backend/Hooks.php:93
 msgid "Appearance"
 msgstr ""
 
-#: modules/Backend/Hooks.php:93
-msgid "Editor"
+#: modules/Backend/Hooks.php:98
+msgid "Content"
 msgstr ""
 
-#: modules/Backend/Hooks.php:98
+#: modules/Backend/Hooks.php:103
 msgid "Dashboard"
 msgstr ""
 
-#: modules/Backend/Hooks.php:182
+#: modules/Backend/Hooks.php:191
 msgid "Default Color Scheme"
 msgstr ""
 
+#: modules/Backend/Hooks.php:193
+msgid "Default"
+msgstr ""
+
+#: modules/Backend/Hooks.php:194
+msgid "Light"
+msgstr ""
+
+#: modules/Backend/Hooks.php:195
+msgid "Blue"
+msgstr ""
+
+#: modules/Backend/Hooks.php:196
+msgid "Coffee"
+msgstr ""
+
+#: modules/Backend/Hooks.php:197
+msgid "Ectoplasm"
+msgstr ""
+
+#: modules/Backend/Hooks.php:198
+msgid "Midnight"
+msgstr ""
+
+#: modules/Backend/Hooks.php:199
+msgid "Ocean"
+msgstr ""
+
 #: modules/Backend/Hooks.php:200
+msgid "Sunrise"
+msgstr ""
+
+#: modules/Backend/Hooks.php:209
 msgid "Disable WYSIWYG"
 msgstr ""
 
-#: modules/Backend/Hooks.php:208
+#: modules/Backend/Hooks.php:217
 msgid "Disable WYSIWYG Media"
 msgstr ""
 
-#: modules/Backend/Hooks.php:216
+#: modules/Backend/Hooks.php:225
 msgid "Disable Gutenberg"
 msgstr ""
 
-#: modules/Backend/Hooks.php:225
+#: modules/Backend/Hooks.php:233
+msgid "Keep Taxonomy Checklist Hierarchy"
+msgstr ""
+
+#: modules/Backend/Hooks.php:241
 msgid "Remove \"Welcome to WP!\""
 msgstr ""
 
-#: modules/Backend/Hooks.php:232
+#: modules/Backend/Hooks.php:248
 msgid "Remove \"Quick Draft\""
 msgstr ""
 
-#: modules/Backend/Hooks.php:239
+#: modules/Backend/Hooks.php:255
 msgid "Remove \"News and Events\""
 msgstr ""
 
-#: modules/Backend/Hooks.php:246
+#: modules/Backend/Hooks.php:262
 msgid "Remove \"At a Glance\""
 msgstr ""
 
-#: modules/Backend/Hooks.php:253
+#: modules/Backend/Hooks.php:269
 msgid "Remove \"Activity\""
 msgstr ""
 

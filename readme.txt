@@ -46,6 +46,7 @@ and ensure better usability.
 * Remove "News and Events" box from dashboard
 * Remove "At a Glance" box from dashboard
 * Remove "Activity" box from dashboard
+* Keep taxonomy hierarchy in checklist
 
 == Media ==
 

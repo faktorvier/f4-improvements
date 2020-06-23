@@ -68,7 +68,7 @@ class Hooks {
 	/**
 	 * Check if options page is already registered
 	 *
-	 * @since 1.1.0
+	 * @since 1.0.0
 	 * @access public
 	 * @static
 	 */
@@ -280,7 +280,7 @@ class Hooks {
 	/**
 	 * After the options has been updated
 	 *
-	 * @since 1.1.0
+	 * @since 1.0.0
 	 * @access public
 	 * @static
 	 */

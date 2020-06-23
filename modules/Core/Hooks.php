@@ -28,7 +28,7 @@ class Hooks {
 	/**
 	 * Plugin activation
 	 *
-	 * @since 1.1.0
+	 * @since 1.0.0
 	 * @access public
 	 * @static
 	 */

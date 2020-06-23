@@ -27,7 +27,7 @@ class Helpers {
 	/**
 	 * Register fields
 	 *
-	 * @since 1.1.0
+	 * @since 1.0.0
 	 * @access public
 	 * @static
 	 */
@@ -56,7 +56,7 @@ class Helpers {
 	/**
 	 * Get options settings
 	 *
-	 * @since 1.1.0
+	 * @since 1.0.0
 	 * @access public
 	 * @static
 	 */

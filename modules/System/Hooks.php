@@ -83,7 +83,7 @@ class Hooks {
 	/**
 	 * Register admin options sections
 	 *
-	 * @since 1.1.0
+	 * @since 1.0.0
 	 * @access public
 	 * @static
 	 */
@@ -104,7 +104,7 @@ class Hooks {
 	/**
 	 * Register admin options
 	 *
-	 * @since 1.1.0
+	 * @since 1.0.0
 	 * @access public
 	 * @static
 	 */
@@ -130,7 +130,7 @@ class Hooks {
 	/**
 	 * Register admin options fields
 	 *
-	 * @since 1.1.0
+	 * @since 1.0.0
 	 * @access public
 	 * @static
 	 */

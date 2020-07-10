@@ -1,21 +1,28 @@
 === F4 Improvements ===
 Contributors: faktorvier
 Donate link: https://www.faktorvier.ch/donate/
-Tags: improvements, enhancements, performance, security, frontend, backend, media
+Tags: improvements, enhancements, performance, security, frontend, backend, media, wp rocket
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 7.0
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin adds a lot of improvements and enhancements to your WordPress installation.
+This plugin adds a lot of improvements and enhancements for WordPress and WP Rocket to your installation.
 
 == Description ==
 
-There are a few features that really should be in the WordPress core. This plugin adds a few more features and a lot of improvements and enhancements to your WordPress installation. They improve the performance for your WordPress, make it more secure, add a few useful new features, removes unimportant stuff and ensure better usability.
+There are a few features that really should be in the WordPress core. This plugin adds a few more features and a lot of improvements and enhancements to your WordPress installation. They improve the performance for your WordPress, make it more secure, add a few useful new features, removes unimportant stuff and ensure better usability. It also adds some improvements for the awesome caching plugin WP Rocket.
 
 = Features =
+
+== WP Rocket ==
+* Add action to toggle caching on/off to the WP Rocket admin menu
+* Enable same cache for all users
+* Remove WP Rocket footprint comment
+* Leave empty lines in .htaccess
+* Ignore additional query strings
 
 == Front end ==
 
@@ -39,12 +46,12 @@ There are a few features that really should be in the WordPress core. This plugi
 * Disable WYSIWYG editor for specific post types
 * Disable WYSIWYG media button for specific post types
 * Disable Gutenberg editor for specific post types
+* Keep taxonomy hierarchy in checklist
 * Remove "Welcome to WP!" box from dashbord
 * Remove "Quick Draft" box from dashboard
 * Remove "News and Events" box from dashboard
 * Remove "At a Glance" box from dashboard
 * Remove "Activity" box from dashboard
-* Keep taxonomy hierarchy in checklist
 
 == Media ==
 
@@ -70,7 +77,9 @@ There are a few features that really should be in the WordPress core. This plugi
 
 = Planned features =
 
-* Add more useful improvements
+* Add more useful WordPress improvements
+* Polylang improvements
+* WooCommerce improvements
 
 == Installation ==
 
@@ -90,8 +99,13 @@ Yes, absolutely!
 2. Back end improvements
 3. Media improvements
 4. System improvements
+5. WP Rocket improvements
 
 == Changelog ==
+
+= 1.2.0 =
+* Add WP Rocket improvements
+* Rework load and init hooks
 
 = 1.1.0 =
 * Add option to set alt attribute to title on upload

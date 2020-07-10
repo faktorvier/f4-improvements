@@ -22,13 +22,9 @@ class Hooks {
 	 * @static
 	 */
 	public static function init() {
-		add_action('F4/WPI/set_constants', __NAMESPACE__ . '\\Hooks::set_default_constants', 99);
+		add_action('F4/WPI/set_constants', __NAMESPACE__ . '\\Hooks::set_default_constants');
 		add_action('F4/WPI/loaded', __NAMESPACE__ . '\\Hooks::loaded');
-
-		add_filter('F4/WPI/register_options_tabs', __NAMESPACE__ . '\\Hooks::register_options_tabs', 10);
-		add_filter('F4/WPI/register_options_sections', __NAMESPACE__ . '\\Hooks::register_options_sections');
-		add_filter('F4/WPI/register_options_settings', __NAMESPACE__ . '\\Hooks::register_options_settings');
-		add_filter('F4/WPI/register_options_fields', __NAMESPACE__ . '\\Hooks::register_options_fields');
+		add_action('F4/WPI/after_loaded', __NAMESPACE__ . '\\Hooks::after_loaded');
 	}
 
 	/**
@@ -45,11 +41,25 @@ class Hooks {
 	/**
 	 * Fires once the module is loaded
 	 *
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 * @access public
 	 * @static
 	 */
 	public static function loaded() {
+		add_filter('F4/WPI/register_options_tabs', __NAMESPACE__ . '\\Hooks::register_options_tabs', 10);
+		add_filter('F4/WPI/register_options_sections', __NAMESPACE__ . '\\Hooks::register_options_sections');
+		add_filter('F4/WPI/register_options_settings', __NAMESPACE__ . '\\Hooks::register_options_settings');
+		add_filter('F4/WPI/register_options_fields', __NAMESPACE__ . '\\Hooks::register_options_fields');
+	}
+
+	/**
+	 * Fires after the module is loaded
+	 *
+	 * @since 1.2.0
+	 * @access public
+	 * @static
+	 */
+	public static function after_loaded() {
 		if(Options::get('remove_rsd_link')) {
 			remove_action('wp_head', 'rsd_link');
 		}

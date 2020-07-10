@@ -13,9 +13,7 @@ This plugin adds a lot of improvements and enhancements to your WordPress instal
 
 == Description ==
 
-There are a few features that really should be in the WordPress core. This plugin adds a few more features and a lot of improvements and enhancements to your
-WordPress installation. They improve the performance for your WordPress, make it more secure, add a few useful new features, removes unimportant stuff
-and ensure better usability.
+There are a few features that really should be in the WordPress core. This plugin adds a few more features and a lot of improvements and enhancements to your WordPress installation. They improve the performance for your WordPress, make it more secure, add a few useful new features, removes unimportant stuff and ensure better usability.
 
 = Features =
 

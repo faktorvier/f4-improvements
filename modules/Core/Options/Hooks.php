@@ -24,7 +24,7 @@ class Hooks {
 	 * @static
 	 */
 	public static function init() {
-		add_action('F4/WPI/set_constants', __NAMESPACE__ . '\\Hooks::set_default_constants', 99);
+		add_action('F4/WPI/set_constants', __NAMESPACE__ . '\\Hooks::set_default_constants');
 		add_action('F4/WPI/loaded', __NAMESPACE__ . '\\Hooks::loaded');
 	}
 

@@ -65,5 +65,6 @@ F4\WPI\System\Hooks::init();
 F4\WPI\Media\Hooks::init();
 F4\WPI\Backend\Hooks::init();
 F4\WPI\Frontend\Hooks::init();
+F4\WPI\Plugins\Hooks::init();
 
 ?>

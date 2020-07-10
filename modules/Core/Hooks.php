@@ -19,25 +19,16 @@ class Hooks {
 	 * @static
 	 */
 	public static function init() {
-		register_activation_hook(F4_WPI_MAIN_FILE, __NAMESPACE__ . '\\Hooks::activate_plugin');
-
+		add_action('F4/WPI/set_constants', __NAMESPACE__ . '\\Hooks::set_default_constants', 1);
 		add_action('plugins_loaded', __NAMESPACE__ . '\\Hooks::core_loaded');
-		add_action('F4/WPI/set_constants', __NAMESPACE__ . '\\Hooks::set_default_constants', 98);
+		add_action('setup_theme', __NAMESPACE__ . '\\Hooks::core_after_loaded');
+		add_action('init', __NAMESPACE__ . '\\Hooks::load_textdomain');
+
+		register_activation_hook(F4_WPI_MAIN_FILE, __NAMESPACE__ . '\\Hooks::core_loaded');
 	}
 
 	/**
-	 * Plugin activation
-	 *
-	 * @since 1.0.0
-	 * @access public
-	 * @static
-	 */
-	public static function activate_plugin() {
-		do_action('F4/WPI/set_constants');
-	}
-
-	/**
-	 * Sets the module default constants
+	 * Sets the plugin default constants
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -48,7 +39,7 @@ class Hooks {
 	}
 
 	/**
-	 * Fires once the core module is loaded
+	 * Fires once the plugin is loaded
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -57,8 +48,17 @@ class Hooks {
 	public static function core_loaded() {
 		do_action('F4/WPI/set_constants');
 		do_action('F4/WPI/loaded');
+	}
 
-		add_action('init', __NAMESPACE__ . '\\Hooks::load_textdomain');
+	/**
+	 * Fires once after the plugin is loaded
+	 *
+	 * @since 1.2.0
+	 * @access public
+	 * @static
+	 */
+	public static function core_after_loaded() {
+		do_action('F4/WPI/after_loaded');
 	}
 
 	/**

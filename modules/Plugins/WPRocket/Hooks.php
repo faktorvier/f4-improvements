@@ -85,7 +85,7 @@ class Hooks {
 		}
 
 		if(Options::get('wprocket_disable_htaccess_newline_removal')) {
-			add_filter('rocket_remove_empty_lines', '__return_false');
+			add_filter('rocket_remove_empty_lines', '__return_false', 99);
 		}
 
 		add_filter('rocket_cache_ignored_parameters', __NAMESPACE__ . '\\Hooks::rocket_cache_ignored_parameters');

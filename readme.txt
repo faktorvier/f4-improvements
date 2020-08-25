@@ -3,9 +3,9 @@ Contributors: faktorvier
 Donate link: https://www.faktorvier.ch/donate/
 Tags: improvements, enhancements, performance, security, frontend, backend, media, wp rocket
 Requires at least: 5.0
-Tested up to: 5.4
+Tested up to: 5.5
 Requires PHP: 7.0
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,6 +102,10 @@ Yes, absolutely!
 5. WP Rocket improvements
 
 == Changelog ==
+
+= 1.2.1 =
+* Update hook priority for rocket_remove_empty_lines
+* Support WordPress 5.5
 
 = 1.2.0 =
 * Add WP Rocket improvements

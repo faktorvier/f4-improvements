@@ -145,7 +145,8 @@ class Hooks {
 		];
 
 		$settings['keep_tax_checklist_hierarchy'] = [
-			'default' => 'default'
+			'default' => '0',
+			'type' => 'boolean'
 		];
 
 		$settings['remove_dashboard_welcome'] = [

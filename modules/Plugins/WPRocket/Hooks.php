@@ -131,22 +131,22 @@ class Hooks {
 	 */
 	public static function register_options_settings($settings) {
 		$settings['wprocket_show_toggle_cache_action'] = [
-			'default' => '1',
+			'default' => '0',
 			'type' => 'boolean'
 		];
 
 		$settings['wprocket_enable_common_loggedin_cache'] = [
-			'default' => '1',
+			'default' => '0',
 			'type' => 'boolean'
 		];
 
 		$settings['wprocket_remove_footprint'] = [
-			'default' => '1',
+			'default' => '0',
 			'type' => 'boolean'
 		];
 
 		$settings['wprocket_disable_htaccess_newline_removal'] = [
-			'default' => '1',
+			'default' => '0',
 			'type' => 'boolean'
 		];
 

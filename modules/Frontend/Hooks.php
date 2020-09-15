@@ -200,12 +200,12 @@ class Hooks {
 		];
 
 		$settings['remove_wp_generator'] = [
-			'default' => '1',
+			'default' => '0',
 			'type' => 'boolean'
 		];
 
 		$settings['remove_remove_emojis'] = [
-			'default' => '1',
+			'default' => '0',
 			'type' => 'boolean'
 		];
 

@@ -138,27 +138,27 @@ class Hooks {
 		];
 
 		$settings['enable_svg_support'] = [
-			'default' => '1',
+			'default' => '0',
 			'type' => 'boolean'
 		];
 
 		$settings['allow_image_upscaling'] = [
-			'default' => '1',
+			'default' => '0',
 			'type' => 'boolean'
 		];
 
 		$settings['normalize_upload_filename'] = [
-			'default' => '1',
+			'default' => '0',
 			'type' => 'boolean'
 		];
 
 		$settings['add_alt_attribute_to_attachment'] = [
-			'default' => '1',
+			'default' => '0',
 			'type' => 'boolean'
 		];
 
 		// $settings['normalize_upload_title'] = [
-		// 	'default' => '1',
+		// 	'default' => '0',
 		// 	'type' => 'boolean'
 		// ];
 

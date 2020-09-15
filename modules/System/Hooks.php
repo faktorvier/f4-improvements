@@ -73,6 +73,12 @@ class Hooks {
 		if(Options::get('disable_theme_editor') && !defined('DISALLOW_FILE_EDIT')) {
 			define('DISALLOW_FILE_EDIT', true);
 		}
+
+		if(Options::get('set_mailer_return_path')) {
+			add_action('phpmailer_init', function($phpmailer) {
+				$phpmailer->Sender = $phpmailer->From;
+			});
+		}
 	}
 
 	/**
@@ -108,6 +114,11 @@ class Hooks {
 			'title' => __('Security', 'f4-improvements')
 		];
 
+		$sections['system-email'] = [
+			'tab' => 'system',
+			'title' => __('E-mail', 'f4-improvements')
+		];
+
 		return $sections;
 	}
 
@@ -130,6 +141,11 @@ class Hooks {
 		];
 
 		$settings['disable_theme_editor'] = [
+			'default' => '0',
+			'type' => 'boolean'
+		];
+
+		$settings['set_mailer_return_path'] = [
 			'default' => '0',
 			'type' => 'boolean'
 		];
@@ -166,6 +182,14 @@ class Hooks {
 			'section' => 'system-security',
 			'type' => 'checkbox',
 			'label' => __('Disable Theme Editor', 'f4-improvements')
+		];
+
+		// Register email fields
+		$fields['set_mailer_return_path'] = [
+			'tab' => 'system',
+			'section' => 'system-email',
+			'type' => 'checkbox',
+			'label' => __('Set phpmailer return path', 'f4-improvements')
 		];
 
 		return $fields;

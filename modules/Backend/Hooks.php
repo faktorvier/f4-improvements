@@ -204,6 +204,7 @@ class Hooks {
 			'options' => [
 				'default' => __('Default', 'f4-improvements'),
 				'light' => __('Light', 'f4-improvements'),
+				'modern' => __('Modern', 'f4-improvements'),
 				'blue' =>  __('Blue', 'f4-improvements'),
 				'coffee' => __('Coffee', 'f4-improvements'),
 				'ectoplasm' => __('Ectoplasm', 'f4-improvements'),

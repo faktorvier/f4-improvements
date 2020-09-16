@@ -36,10 +36,15 @@ class Hooks {
 	public static function loaded() {
 		// Check if plugins are installed
 		define('F4_WPI_PLUGIN_ACTIVE_WPROCKET', defined('WP_ROCKET_VERSION'));
+		define('F4_WPI_PLUGIN_ACTIVE_WOOCOMMERCE', function_exists('WC'));
 
 		// Init plugins improvements
 		if(F4_WPI_PLUGIN_ACTIVE_WPROCKET) {
 			\F4\WPI\Plugins\WPRocket\Hooks::init();
+		}
+
+		if(F4_WPI_PLUGIN_ACTIVE_WOOCOMMERCE) {
+			\F4\WPI\Plugins\WooCommerce\Hooks::init();
 		}
 	}
 }

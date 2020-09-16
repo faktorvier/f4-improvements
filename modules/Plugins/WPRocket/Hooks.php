@@ -28,17 +28,6 @@ class Hooks {
 	}
 
 	/**
-	 * Sets the module default constants
-	 *
-	 * @since 1.2.0
-	 * @access public
-	 * @static
-	 */
-	public static function set_default_constants() {
-
-	}
-
-	/**
 	 * Fires once the module is loaded
 	 *
 	 * @since 1.2.0
@@ -55,6 +44,178 @@ class Hooks {
 	}
 
 	/**
+	 * Sets the module default constants
+	 *
+	 * @since 1.2.0
+	 * @access public
+	 * @static
+	 */
+	public static function set_default_constants() {
+
+	}
+
+	/**
+	 * Register admin options tab
+	 *
+	 * @since 1.2.0
+	 * @access public
+	 * @static
+	 */
+	public static function register_options_tabs($tabs) {
+		$tabs['wprocket'] = [
+			'label' => __('WP Rocket', 'f4-improvements')
+		];
+
+		return $tabs;
+	}
+
+	/**
+	 * Register admin options sections
+	 *
+	 * @since 1.2.0
+	 * @access public
+	 * @static
+	 */
+	public static function register_options_sections($sections) {
+		$sections['wprocket-general'] = [
+			'tab' => 'wprocket',
+			'title' => __('General', 'f4-improvements')
+		];
+
+		if(F4_WPI_PLUGIN_ACTIVE_WOOCOMMERCE) {
+			$sections['wprocket-woocommerce'] = [
+				'tab' => 'wprocket',
+				'title' => __('WooCommerce', 'f4-improvements')
+			];
+		}
+
+		return $sections;
+	}
+
+	/**
+	 * Register admin options
+	 *
+	 * @since 1.2.0
+	 * @access public
+	 * @static
+	 */
+	public static function register_options_settings($settings) {
+		// General
+		$settings['wprocket_show_toggle_cache_action'] = [
+			'default' => '0',
+			'type' => 'boolean'
+		];
+
+		$settings['wprocket_enable_common_loggedin_cache'] = [
+			'default' => '0',
+			'type' => 'boolean'
+		];
+
+		$settings['wprocket_remove_footprint'] = [
+			'default' => '0',
+			'type' => 'boolean'
+		];
+
+		$settings['wprocket_disable_htaccess_newline_removal'] = [
+			'default' => '0',
+			'type' => 'boolean'
+		];
+
+		$settings['wprocket_ignore_query_strings'] = [
+			'default' => ''
+		];
+
+		// WooCommerce
+		if(F4_WPI_PLUGIN_ACTIVE_WOOCOMMERCE) {
+			$settings['wprocket_wc_clean_post_cache_after_stock_change'] = [
+				'default' => '0',
+				'type' => 'boolean'
+			];
+
+			$settings['wprocket_wc_deactivate_cart_fragments_cache'] = [
+				'default' => '0',
+				'type' => 'boolean'
+			];
+		}
+
+		// WooCommerce
+		// https://github.com/wp-media/wp-rocket-helpers/tree/master/compatibility/wp-rocket-compat-wc-order-clean-cache
+		// https://github.com/wp-media/wp-rocket-helpers/tree/master/compatibility/wp-rocket-compat-wc-cart-fragments
+
+		// https://github.com/wp-media/wp-rocket-helpers/tree/master/_experimental/wp-rocket-compat-wc-optimize
+		// https://github.com/wp-media/wp-rocket-helpers/tree/master/compatibility/wp-rocket-compat-wc-product-images
+		// https://github.com/wp-media/wp-rocket-helpers/tree/master/compatibility/wp-rocket-compat-wc-recently-viewed-widget
+
+		return $settings;
+	}
+
+
+	/**
+	 * Register admin options fields
+	 *
+	 * @since 1.2.0
+	 * @access public
+	 * @static
+	 */
+	public static function register_options_fields($fields) {
+		// General
+		$fields['wprocket_show_toggle_cache_action'] = [
+			'tab' => 'wprocket',
+			'section' => 'wprocket-general',
+			'type' => 'checkbox',
+			'label' => __('Show toggle cache action', 'f4-improvements')
+		];
+
+		$fields['wprocket_enable_common_loggedin_cache'] = [
+			'tab' => 'wprocket',
+			'section' => 'wprocket-general',
+			'type' => 'checkbox',
+			'label' => __('Common Cache for all Users', 'f4-improvements')
+		];
+
+		$fields['wprocket_remove_footprint'] = [
+			'tab' => 'wprocket',
+			'section' => 'wprocket-general',
+			'type' => 'checkbox',
+			'label' => __('Remove Footprint Comment', 'f4-improvements')
+		];
+
+		$fields['wprocket_disable_htaccess_newline_removal'] = [
+			'tab' => 'wprocket',
+			'section' => 'wprocket-general',
+			'type' => 'checkbox',
+			'label' => __('Leave empty Lines in .htaccess', 'f4-improvements')
+		];
+
+		$fields['wprocket_ignore_query_strings'] = [
+			'tab' => 'wprocket',
+			'section' => 'wprocket-general',
+			'type' => 'text',
+			'placeholder' => 'comma separated',
+			'label' => __('Ignore Query Strings', 'f4-improvements')
+		];
+
+		// WooCommerce
+		if(F4_WPI_PLUGIN_ACTIVE_WOOCOMMERCE) {
+			$fields['wprocket_wc_clean_post_cache_after_stock_change'] = [
+				'tab' => 'wprocket',
+				'section' => 'wprocket-woocommerce',
+				'type' => 'checkbox',
+				'label' => __('Clean post cache after stock change', 'f4-improvements')
+			];
+
+			$fields['wprocket_wc_deactivate_cart_fragments_cache'] = [
+				'tab' => 'wprocket',
+				'section' => 'wprocket-woocommerce',
+				'type' => 'checkbox',
+				'label' => __('Deactivate cart fragments cache', 'f4-improvements')
+			];
+		}
+
+		return $fields;
+	}
+
+	/**
 	 * Fires after the module is loaded
 	 *
 	 * @since 1.2.0
@@ -62,6 +223,7 @@ class Hooks {
 	 * @static
 	 */
 	public static function after_loaded() {
+		// General
 		if(Options::get('wprocket_show_toggle_cache_action')) {
 			add_filter('wp_before_admin_bar_render', __NAMESPACE__ . '\\Hooks::change_admin_bar_menu');
 			add_filter('admin_action_f4wpi_toggle_wprocket_cache', __NAMESPACE__ . '\\Hooks::toggle_cache_admin_action');
@@ -89,121 +251,18 @@ class Hooks {
 		}
 
 		add_filter('rocket_cache_ignored_parameters', __NAMESPACE__ . '\\Hooks::rocket_cache_ignored_parameters');
-	}
 
-	/**
-	 * Register admin options tab
-	 *
-	 * @since 1.2.0
-	 * @access public
-	 * @static
-	 */
-	public static function register_options_tabs($tabs) {
-		$tabs['wprocket'] = [
-			'label' => __('WP Rocket', 'f4-improvements')
-		];
+		// WooCommerce
+		if(F4_WPI_PLUGIN_ACTIVE_WOOCOMMERCE) {
+			if(Options::get('wprocket_wc_clean_post_cache_after_stock_change')) {
+				add_action('woocommerce_reduce_order_stock', __NAMESPACE__ . '\\Hooks::wc_clean_post_cache_after_stock_change');
+				add_action('woocommerce_restore_order_stock', __NAMESPACE__ . '\\Hooks::wc_clean_post_cache_after_stock_change');
+			}
 
-		return $tabs;
-	}
-
-	/**
-	 * Register admin options sections
-	 *
-	 * @since 1.2.0
-	 * @access public
-	 * @static
-	 */
-	public static function register_options_sections($sections) {
-		$sections['wprocket'] = [
-			'tab' => 'wprocket',
-			//'title' => __('WP Rocket', 'f4-improvements')
-		];
-
-		return $sections;
-	}
-
-	/**
-	 * Register admin options
-	 *
-	 * @since 1.2.0
-	 * @access public
-	 * @static
-	 */
-	public static function register_options_settings($settings) {
-		$settings['wprocket_show_toggle_cache_action'] = [
-			'default' => '0',
-			'type' => 'boolean'
-		];
-
-		$settings['wprocket_enable_common_loggedin_cache'] = [
-			'default' => '0',
-			'type' => 'boolean'
-		];
-
-		$settings['wprocket_remove_footprint'] = [
-			'default' => '0',
-			'type' => 'boolean'
-		];
-
-		$settings['wprocket_disable_htaccess_newline_removal'] = [
-			'default' => '0',
-			'type' => 'boolean'
-		];
-
-		$settings['wprocket_ignore_query_strings'] = [
-			'default' => ''
-		];
-
-		return $settings;
-	}
-
-
-	/**
-	 * Register admin options fields
-	 *
-	 * @since 1.2.0
-	 * @access public
-	 * @static
-	 */
-	public static function register_options_fields($fields) {
-		// Register wprocket fields
-		$fields['wprocket_show_toggle_cache_action'] = [
-			'tab' => 'wprocket',
-			'section' => 'wprocket',
-			'type' => 'checkbox',
-			'label' => __('Show toggle cache action', 'f4-improvements')
-		];
-
-		$fields['wprocket_enable_common_loggedin_cache'] = [
-			'tab' => 'wprocket',
-			'section' => 'wprocket',
-			'type' => 'checkbox',
-			'label' => __('Common Cache for all Users', 'f4-improvements')
-		];
-
-		$fields['wprocket_remove_footprint'] = [
-			'tab' => 'wprocket',
-			'section' => 'wprocket',
-			'type' => 'checkbox',
-			'label' => __('Remove Footprint Comment', 'f4-improvements')
-		];
-
-		$fields['wprocket_disable_htaccess_newline_removal'] = [
-			'tab' => 'wprocket',
-			'section' => 'wprocket',
-			'type' => 'checkbox',
-			'label' => __('Leave empty Lines in .htaccess', 'f4-improvements')
-		];
-
-		$fields['wprocket_ignore_query_strings'] = [
-			'tab' => 'wprocket',
-			'section' => 'wprocket',
-			'type' => 'text',
-			'placeholder' => 'comma separated',
-			'label' => __('Ignore Query Strings', 'f4-improvements')
-		];
-
-		return $fields;
+			if(Options::get('wprocket_wc_deactivate_cart_fragments_cache')) {
+				add_filter('rocket_cache_wc_empty_cart', '__return_false');
+			}
+		}
 	}
 
 	/**
@@ -236,58 +295,6 @@ class Hooks {
 		}
 
 		return $params;
-	}
-
-	/**
-	 * Plugin activation
-	 *
-	 * @since 1.2.0
-	 * @access public
-	 * @static
-	 */
-	public static function activate_plugin() {
-		if(F4_WPI_PLUGIN_ACTIVE_WPROCKET) {
-			if(Options::get('wprocket_enable_common_loggedin_cache') == '1') {
-				add_filter('rocket_common_cache_logged_users', '__return_true');
-			} else {
-				add_filter('rocket_common_cache_logged_users', '__return_false');
-			}
-
-			Helpers::clear_cache();
-
-		}
-	}
-
-	/**
-	 * Plugin deactivation
-	 *
-	 * @since 1.2.0
-	 * @access public
-	 * @static
-	 */
-	public static function deactivate_plugin() {
-		if(F4_WPI_PLUGIN_ACTIVE_WPROCKET) {
-			add_filter('rocket_common_cache_logged_users', '__return_false');
-
-			Helpers::clear_cache();
-		}
-	}
-
-	/**
-	 * After update
-	 *
-	 * @since 1.2.0
-	 * @access public
-	 * @static
-	 */
-	public static function after_update() {
-		if(Options::get('wprocket_enable_common_loggedin_cache') == '1') {
-			add_filter('rocket_common_cache_logged_users', '__return_true');
-		} else {
-			add_filter('rocket_common_cache_logged_users', '__return_false');
-		}
-
-		Helpers::clear_cache();
 	}
 
 	/**
@@ -371,6 +378,100 @@ class Hooks {
 				exit();
 			}
 		}
+	}
+
+	/**
+	 * Clean post cache after order
+	 *
+	 * @since 1.3.0
+	 * @access public
+	 * @static
+	 */
+	public static function wc_clean_post_cache_after_stock_change($order) {
+		$items = $order->get_items();
+
+		foreach($items as $item) {
+			$product_id = (int)$item['product_id'];
+			$product_ids = [$item['product_id']];
+
+			if(function_exists('PLL')) {
+				$product_ids = PLL()->model->post->get_translations($product_id);
+			} elseif(function_exists('wpml_get_content_translations')) {
+				$product_ids = wpml_get_content_translations('post_product', $product_id);
+			}
+
+			foreach($product_ids as $translated_product_id) {
+				rocket_clean_post((int)$translated_product_id);
+			}
+
+			// @todo: clean product overview archive pages
+			// @todo: preload page
+		}
+	}
+
+	/**
+	 * Plugin activation
+	 *
+	 * @since 1.2.0
+	 * @access public
+	 * @static
+	 */
+	public static function activate_plugin() {
+		if(F4_WPI_PLUGIN_ACTIVE_WPROCKET) {
+			if(Options::get('wprocket_enable_common_loggedin_cache')) {
+				add_filter('rocket_common_cache_logged_users', '__return_true');
+			} else {
+				add_filter('rocket_common_cache_logged_users', '__return_false');
+			}
+
+			if(Options::get('wprocket_wc_deactivate_cart_fragments_cache')) {
+				add_filter('rocket_cache_wc_empty_cart', '__return_false');
+			} else {
+				add_filter('rocket_cache_wc_empty_cart', '__return_true');
+			}
+
+			Helpers::clear_cache();
+
+		}
+	}
+
+	/**
+	 * Plugin deactivation
+	 *
+	 * @since 1.2.0
+	 * @access public
+	 * @static
+	 */
+	public static function deactivate_plugin() {
+		if(F4_WPI_PLUGIN_ACTIVE_WPROCKET) {
+			add_filter('rocket_common_cache_logged_users', '__return_false');
+			add_filter('rocket_cache_wc_empty_cart', '__return_true');
+
+			Helpers::clear_cache();
+		}
+	}
+
+	/**
+	 * After update
+	 *
+	 * @since 1.2.0
+	 * @access public
+	 * @static
+	 */
+	public static function after_update() {
+		if(Options::get('wprocket_enable_common_loggedin_cache')) {
+			add_filter('rocket_common_cache_logged_users', '__return_true');
+		} else {
+			add_filter('rocket_common_cache_logged_users', '__return_false');
+		}
+
+		if(Options::get('wprocket_wc_deactivate_cart_fragments_cache')) {
+			add_filter('rocket_cache_wc_empty_cart', '__return_false');
+		} else {
+			add_filter('rocket_cache_wc_empty_cart', '__return_true');
+		}
+
+		Helpers::clear_cache();
 	}
 }
 

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: F4 Improvements\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-04 13:38+0000\n"
+"POT-Creation-Date: 2020-09-16 11:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,216 +15,224 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.3.4; wp-5.4.1"
 
-#: modules/Backend/Hooks.php:77
+#: modules/Backend/Hooks.php:88
 msgid "Back end"
 msgstr ""
 
-#: modules/Backend/Hooks.php:93
+#: modules/Backend/Hooks.php:104
 msgid "Appearance"
 msgstr ""
 
-#: modules/Backend/Hooks.php:98
+#: modules/Backend/Hooks.php:109
 msgid "Content"
 msgstr ""
 
-#: modules/Backend/Hooks.php:103
+#: modules/Backend/Hooks.php:114
 msgid "Dashboard"
 msgstr ""
 
-#: modules/Backend/Hooks.php:191
+#: modules/Backend/Hooks.php:203
 msgid "Default Color Scheme"
 msgstr ""
 
-#: modules/Backend/Hooks.php:193
+#: modules/Backend/Hooks.php:205
 msgid "Default"
 msgstr ""
 
-#: modules/Backend/Hooks.php:194
+#: modules/Backend/Hooks.php:206
 msgid "Light"
 msgstr ""
 
-#: modules/Backend/Hooks.php:195
+#: modules/Backend/Hooks.php:207
 msgid "Blue"
 msgstr ""
 
-#: modules/Backend/Hooks.php:196
+#: modules/Backend/Hooks.php:208
 msgid "Coffee"
 msgstr ""
 
-#: modules/Backend/Hooks.php:197
+#: modules/Backend/Hooks.php:209
 msgid "Ectoplasm"
 msgstr ""
 
-#: modules/Backend/Hooks.php:198
+#: modules/Backend/Hooks.php:210
 msgid "Midnight"
 msgstr ""
 
-#: modules/Backend/Hooks.php:199
+#: modules/Backend/Hooks.php:211
 msgid "Ocean"
 msgstr ""
 
-#: modules/Backend/Hooks.php:200
+#: modules/Backend/Hooks.php:212
 msgid "Sunrise"
 msgstr ""
 
-#: modules/Backend/Hooks.php:209
+#: modules/Backend/Hooks.php:221
 msgid "Disable WYSIWYG"
 msgstr ""
 
-#: modules/Backend/Hooks.php:217
+#: modules/Backend/Hooks.php:229
 msgid "Disable WYSIWYG Media"
 msgstr ""
 
-#: modules/Backend/Hooks.php:225
+#: modules/Backend/Hooks.php:237
 msgid "Disable Gutenberg"
 msgstr ""
 
-#: modules/Backend/Hooks.php:233
+#: modules/Backend/Hooks.php:245
 msgid "Keep Taxonomy Checklist Hierarchy"
 msgstr ""
 
-#: modules/Backend/Hooks.php:241
+#: modules/Backend/Hooks.php:253
 msgid "Remove \"Welcome to WP!\""
 msgstr ""
 
-#: modules/Backend/Hooks.php:248
+#: modules/Backend/Hooks.php:260
 msgid "Remove \"Quick Draft\""
 msgstr ""
 
-#: modules/Backend/Hooks.php:255
+#: modules/Backend/Hooks.php:267
 msgid "Remove \"News and Events\""
 msgstr ""
 
-#: modules/Backend/Hooks.php:262
+#: modules/Backend/Hooks.php:274
 msgid "Remove \"At a Glance\""
 msgstr ""
 
-#: modules/Backend/Hooks.php:269
+#: modules/Backend/Hooks.php:281
 msgid "Remove \"Activity\""
 msgstr ""
 
-#: modules/Frontend/Hooks.php:117
+#: modules/Frontend/Hooks.php:127 modules/Plugins/WooCommerce/Hooks.php:82
 msgid "Front end"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:133
+#: modules/Frontend/Hooks.php:143
 msgid "Meta Tags"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:138
+#: modules/Frontend/Hooks.php:148
 msgid "Scripts and Stylesheets"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:143
+#: modules/Frontend/Hooks.php:153
 msgid "Pages"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:238
+#: modules/Frontend/Hooks.php:248
 msgid "Remove RSD Link"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:245
+#: modules/Frontend/Hooks.php:255
 msgid "Remove REST Output"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:252
+#: modules/Frontend/Hooks.php:262
 msgid "Remove oEmbed Discovery"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:259
+#: modules/Frontend/Hooks.php:269
 msgid "Remove wlwmanifest Link"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:266
+#: modules/Frontend/Hooks.php:276
 msgid "Remove Shortlinks"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:273
+#: modules/Frontend/Hooks.php:283 modules/Plugins/WooCommerce/Hooks.php:146
 msgid "Remove Adjacent Links"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:280
+#: modules/Frontend/Hooks.php:290
 msgid "Remove Feed Links"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:287
+#: modules/Frontend/Hooks.php:297
 msgid "Remove Generator Tag"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:295
+#: modules/Frontend/Hooks.php:305
 msgid "Remove Emojis"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:302
+#: modules/Frontend/Hooks.php:312
 msgid "Remove oEmbed Assets"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:309
+#: modules/Frontend/Hooks.php:319
 msgid "Remove Gutenberg Assets"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:317
+#: modules/Frontend/Hooks.php:327
 msgid "Hide Author Pages"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:324
+#: modules/Frontend/Hooks.php:334
 msgid "Hide Admin Toolbar"
 msgstr ""
 
-#: modules/Media/Hooks.php:96
+#: modules/Media/Hooks.php:106
 msgid "Media"
 msgstr ""
 
-#: modules/Media/Hooks.php:112
+#: modules/Media/Hooks.php:122
 msgid "Media Library"
 msgstr ""
 
-#: modules/Media/Hooks.php:177
+#: modules/Media/Hooks.php:187
 msgid "Change JPEG Quality"
 msgstr ""
 
-#: modules/Media/Hooks.php:185
+#: modules/Media/Hooks.php:195
 msgid "Enable SVG Support"
 msgstr ""
 
-#: modules/Media/Hooks.php:192
+#: modules/Media/Hooks.php:202
 msgid "Allow image upscaling"
 msgstr ""
 
-#: modules/Media/Hooks.php:199
+#: modules/Media/Hooks.php:209
 msgid "Normalize Upload Filename"
 msgstr ""
 
-#: modules/Media/Hooks.php:206
+#: modules/Media/Hooks.php:216
 msgid "Use title as alt attribute on upload"
 msgstr ""
 
-#: modules/Media/Hooks.php:220
+#: modules/Media/Hooks.php:230
 msgid "Remove default image sizes"
 msgstr ""
 
-#: modules/System/Hooks.php:77
+#: modules/System/Hooks.php:93 modules/Plugins/WooCommerce/Hooks.php:87
 msgid "System"
 msgstr ""
 
-#: modules/System/Hooks.php:93
+#: modules/System/Hooks.php:109
 msgid "Updates"
 msgstr ""
 
-#: modules/System/Hooks.php:98
+#: modules/System/Hooks.php:114
 msgid "Security"
 msgstr ""
 
-#: modules/System/Hooks.php:143
+#: modules/System/Hooks.php:119
+msgid "E-mail"
+msgstr ""
+
+#: modules/System/Hooks.php:169
 msgid "Disable Core Update Email"
 msgstr ""
 
-#: modules/System/Hooks.php:151
+#: modules/System/Hooks.php:177
 msgid "Disable XML-RPC"
 msgstr ""
 
-#: modules/System/Hooks.php:158
+#: modules/System/Hooks.php:184
 msgid "Disable Theme Editor"
+msgstr ""
+
+#: modules/System/Hooks.php:192
+msgid "Set phpmailer return path"
 msgstr ""
 
 #: modules/Core/Options/Hooks.php:118
@@ -240,8 +248,65 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
+#: modules/Plugins/WPRocket/Hooks.php:66
+msgid "WP Rocket"
+msgstr ""
+
+#: modules/Plugins/WPRocket/Hooks.php:82
+msgid "General"
+msgstr ""
+
+#: modules/Plugins/WPRocket/Hooks.php:88
+#: modules/Plugins/WooCommerce/Hooks.php:66
+msgid "WooCommerce"
+msgstr ""
+
+#: modules/Plugins/WPRocket/Hooks.php:166
+msgid "Show toggle cache action"
+msgstr ""
+
+#: modules/Plugins/WPRocket/Hooks.php:173
+msgid "Common Cache for all Users"
+msgstr ""
+
+#: modules/Plugins/WPRocket/Hooks.php:180
+msgid "Remove Footprint Comment"
+msgstr ""
+
+#: modules/Plugins/WPRocket/Hooks.php:187
+msgid "Leave empty Lines in .htaccess"
+msgstr ""
+
+#: modules/Plugins/WPRocket/Hooks.php:195
+msgid "Ignore Query Strings"
+msgstr ""
+
+#: modules/Plugins/WPRocket/Hooks.php:204
+msgid "Clean post cache after stock change"
+msgstr ""
+
+#: modules/Plugins/WPRocket/Hooks.php:211
+msgid "Deactivate cart fragments cache"
+msgstr ""
+
+#: modules/Plugins/WooCommerce/Hooks.php:139
+msgid "Save ship_to_different_address"
+msgstr ""
+
+#: modules/Plugins/WooCommerce/Hooks.php:153
+msgid "Hide flat rates if free shipping"
+msgstr ""
+
+#: modules/Plugins/WooCommerce/Hooks.php:161
+msgid "Set reply to email"
+msgstr ""
+
 #: modules/Core/Options/views/field-page.php:8
 msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#. Name of the plugin
+msgid "F4 Improvements"
 msgstr ""
 
 #. Description of the plugin

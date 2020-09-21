@@ -14,8 +14,6 @@ use F4\WPI\Core\Options\Helpers as Helpers;
  * @package F4\WPI\Core\Options
  */
 class Hooks {
-	protected static $page_registered = false;
-
 	/**
 	 * Initialize the hooks
 	 *
@@ -57,27 +55,11 @@ class Hooks {
 	 * @static
 	 */
 	public static function loaded() {
-		add_action('admin_menu', __NAMESPACE__ . '\\Hooks::check_registered_options_page', 99);
 		add_action('admin_menu', __NAMESPACE__ . '\\Hooks::register_options_page', 99);
 		add_action('admin_init', __NAMESPACE__ . '\\Hooks::register_options');
 		add_action('admin_head', __NAMESPACE__ . '\\Hooks::add_admin_styles');
 		add_filter('plugin_action_links_' . F4_WPI_BASENAME, __NAMESPACE__ . '\\Hooks::add_settings_link_to_plugin_list');
 		add_action('wp_redirect',  __NAMESPACE__ . '\\Hooks::after_update', 50, 2);
-	}
-
-	/**
-	 * Check if options page is already registered
-	 *
-	 * @since 1.0.0
-	 * @access public
-	 * @static
-	 */
-	public static function check_registered_options_page() {
-		global $_registered_pages;
-
-		if(isset($_registered_pages['settings_page_' . F4_WPI_OPTION_PAGE_NAME])) {
-			self::$page_registered = true;
-		}
 	}
 
 	/**
@@ -88,10 +70,6 @@ class Hooks {
 	 * @static
 	 */
 	public static function register_options_page() {
-		if(self::$page_registered) {
-			return;
-		}
-
 		$submenu_label = '
 		<span class="' . F4_WPI_OPTION_PAGE_NAME . '-submenu-item">
 			<svg class="f4-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"width="75px" height="100px" viewBox="0 0 75 100">
@@ -202,10 +180,6 @@ class Hooks {
 	 * @static
 	 */
 	public static function add_admin_styles() {
-		if(self::$page_registered) {
-			return;
-		}
-
 		echo '<style>';
 			echo '
 				.' . F4_WPI_OPTION_PAGE_NAME . '-submenu-item {

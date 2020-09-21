@@ -13,7 +13,7 @@ This plugin adds a lot of improvements and enhancements for WordPress and WP Roc
 
 == Description ==
 
-There are a few features that really should be in the WordPress core. This plugin adds a few more features and a lot of improvements and enhancements to your WordPress installation. They improve the performance for your WordPress, make it more secure, add a few useful new features, removes unimportant stuff and ensure better usability. It also adds some improvements for the awesome caching plugin WP Rocket.
+There are a few features that really should be in the WordPress core. This plugin adds a few more features and a lot of improvements and enhancements to your WordPress installation. They improve the performance for your WordPress, make it more secure, add a few useful new features, removes unimportant stuff and ensure better usability. It also adds some improvements for the awesome caching plugin WP Rocket and WooCommerce.
 
 = Features =
 
@@ -23,6 +23,14 @@ There are a few features that really should be in the WordPress core. This plugi
 * Remove WP Rocket footprint comment
 * Leave empty lines in .htaccess
 * Ignore additional query strings
+* WooCommerce: Clear product cache on stock change
+* WooCommerce: Disable cart fragments cache
+
+== WooCommerce ==
+* Save Save ship_to_different_address
+* Remove Adjacent Links
+* Hide flatrates if free shipping
+* Set reply to email
 
 == Front end ==
 
@@ -67,6 +75,7 @@ There are a few features that really should be in the WordPress core. This plugi
 * Disable Core Update Email
 * Disable XML-RPC
 * Disable Theme Editor
+* Set phpmailer return path
 
 = Features overview =
 
@@ -102,6 +111,12 @@ Yes, absolutely!
 5. WP Rocket improvements
 
 == Changelog ==
+
+= 1.3.0 =
+* Add WooCommerce improvements *
+* Add new "Modern" color theme to theme selection
+* Remove all default values for new installations
+* System: Add option to set phpmailer return path
 
 = 1.2.1 =
 * Update hook priority for rocket_remove_empty_lines

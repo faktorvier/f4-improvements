@@ -114,7 +114,7 @@ Yes, absolutely!
 == Changelog ==
 
 = 1.3.0 =
-* Add WooCommerce improvements *
+* Add WooCommerce improvements
 * Add new "Modern" color theme to theme selection
 * Remove all default values for new installations
 * System: Add option to set phpmailer return path

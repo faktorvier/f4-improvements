@@ -2,6 +2,8 @@
 
 namespace F4\WPI\Plugins\WPRocket;
 
+use F4\WPI\Core\Helpers as Core;
+
 /**
  * Plugins/WPRocket Helpers
  *
@@ -37,6 +39,12 @@ class Helpers {
 
 		if(function_exists('flush_rocket_htaccess')) {
 			//flush_rocket_htaccess();
+		}
+
+		$critical_css_path = rocket_get_constant('WP_ROCKET_CRITICAL_CSS_PATH') . get_current_blog_id() . '/';
+
+		if(file_exists($critical_css_path)) {
+			Core::rmdir_content($critical_css_path);
 		}
 
 		/*

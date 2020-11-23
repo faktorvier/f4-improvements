@@ -235,6 +235,7 @@ class Hooks {
 			add_filter('rocket_cache_wc_empty_cart', '__return_false', 99);
 			add_filter('rocket_css_url', __NAMESPACE__ . '\\Hooks::disable_assets_minify', 10, 2);
 			add_filter('rocket_js_url', __NAMESPACE__ . '\\Hooks::disable_assets_minify', 10, 2);
+			add_filter('do_rocket_critical_css_generation', '__return_false');
 			remove_action('admin_notices', 'rocket_warning_plugin_modification');
 		}
 

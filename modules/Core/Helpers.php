@@ -212,6 +212,26 @@ class Helpers {
 
 		return $is_post_type;
 	}
+
+	/**
+	 * Removes all content from a directory
+	 *
+	 * @since 1.3.1
+ 	 * @access public
+ 	 * @static
+	 * @param string $dir The path to the directory
+	 */
+	public static function rmdir_content($dir) {
+		$files = glob($dir . '/*');
+
+		foreach($files as $file){
+			if(is_file($file)) {
+				unlink($file);
+			} else {
+				self::rmdir_recursive($file);
+			}
+		}
+	}
 }
 
 ?>

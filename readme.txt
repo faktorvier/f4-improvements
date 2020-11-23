@@ -5,7 +5,7 @@ Tags: improvements, enhancements, performance, security, frontend, backend, medi
 Requires at least: 5.0
 Tested up to: 5.5
 Requires PHP: 7.0
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -112,6 +112,9 @@ Yes, absolutely!
 6. WooCommerce improvements
 
 == Changelog ==
+
+= 1.3.1 =
+* WP Rocket: Don't generate and flush critical css if cache is disabled
 
 = 1.3.0 =
 * Add WooCommerce improvements

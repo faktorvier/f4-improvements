@@ -30,6 +30,7 @@ There are a few features that really should be in the WordPress core. This plugi
 * Save Save ship_to_different_address
 * Remove Adjacent Links
 * Hide flatrates if free shipping
+* Hide jumping embed loader in backend
 * Set reply to email
 
 == Front end ==
@@ -73,6 +74,7 @@ There are a few features that really should be in the WordPress core. This plugi
 == Core ==
 
 * Disable Core Update Email
+* Skip default plugins and themes on update
 * Disable XML-RPC
 * Disable Theme Editor
 * Set phpmailer return path

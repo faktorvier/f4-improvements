@@ -82,6 +82,11 @@ class Hooks {
 			'title' => __('Front end', 'f4-improvements')
 		];
 
+		$sections['wc-backend'] = [
+			'tab' => 'woocommerce',
+			'title' => __('Back end', 'f4-improvements')
+		];
+
 		$sections['wc-system'] = [
 			'tab' => 'woocommerce',
 			'title' => __('System', 'f4-improvements')
@@ -110,6 +115,12 @@ class Hooks {
 		];
 
 		$settings['wc_hide_flat_rates_if_free_shipping'] = [
+			'default' => '0',
+			'type' => 'boolean'
+		];
+
+		// Backend
+		$settings['wc_hide_embed_loader'] = [
 			'default' => '0',
 			'type' => 'boolean'
 		];
@@ -153,6 +164,14 @@ class Hooks {
 			'label' => __('Hide flat rates if free shipping', 'f4-improvements')
 		];
 
+		// Backend
+		$fields['wc_hide_embed_loader'] = [
+			'tab' => 'woocommerce',
+			'section' => 'wc-backend',
+			'type' => 'checkbox',
+			'label' => __('Hide jumping notices loader', 'f4-improvements')
+		];
+
 		// System
 		$fields['wc_set_reply_to_email'] = [
 			'tab' => 'woocommerce',
@@ -185,6 +204,11 @@ class Hooks {
 
 		if(Options::get('wc_hide_flat_rates_if_free_shipping')) {
 			add_filter('woocommerce_package_rates', __NAMESPACE__ . '\\Hooks::hide_flat_rates_if_free_shipping', 10, 2);
+		}
+
+		// Backend
+		if(Options::get('wc_hide_embed_loader')) {
+			add_action('admin_head', __NAMESPACE__ . '\\Hooks::hide_embed_loader');
 		}
 
 		// System
@@ -251,6 +275,32 @@ class Hooks {
 		}
 
 		return $rates;
+	}
+
+
+	/**
+	 * Hide jumping embed loader on woocommerce pages
+	 *
+	 * @since 1.4.0
+	 * @access public
+	 * @static
+	 */
+	public static function hide_embed_loader() {
+		echo '<style>
+			.woocommerce-layout__primary > .woocommerce-spinner {
+				display: none !important;
+			}
+
+			.is-embed-loading + #wpbody .wrap {
+				padding-top: 70px !important;
+			}
+
+			@media (max-width:782px) {
+				.is-embed-loading + #wpbody .wrap {
+					padding-top: 21px !important;
+				}
+			}
+		</style>';
 	}
 
 	/**

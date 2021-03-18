@@ -115,6 +115,10 @@ Yes, absolutely!
 
 == Changelog ==
 
+= 1.4.0 =
+* Add option to skip default plugins and themes on update
+* Add option to hide jumping embed loader in backend
+
 = 1.3.3 =
 * Support WordPress 5.7
 

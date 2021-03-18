@@ -65,6 +65,10 @@ class Hooks {
 			add_filter('auto_core_update_send_email', '__return_false');
 		}
 
+		if(Options::get('skip_upgrade_new_bundled') && !defined('CORE_UPGRADE_SKIP_NEW_BUNDLED')) {
+			define('CORE_UPGRADE_SKIP_NEW_BUNDLED', true);
+		}
+
 		// Security
 		if(Options::get('disable_xmlrpc')) {
 			add_filter('xmlrpc_enabled', '__return_false');
@@ -135,6 +139,11 @@ class Hooks {
 			'type' => 'boolean'
 		];
 
+		$settings['skip_upgrade_new_bundled'] = [
+			'default' => '0',
+			'type' => 'boolean'
+		];
+
 		$settings['disable_xmlrpc'] = [
 			'default' => '0',
 			'type' => 'boolean'
@@ -167,6 +176,13 @@ class Hooks {
 			'section' => 'system-updates',
 			'type' => 'checkbox',
 			'label' => __('Disable Core Update Email', 'f4-improvements')
+		];
+
+		$fields['skip_upgrade_new_bundled'] = [
+			'tab' => 'system',
+			'section' => 'system-updates',
+			'type' => 'checkbox',
+			'label' => __('Skip default plugins and themes on update', 'f4-improvements')
 		];
 
 		// Register security fields

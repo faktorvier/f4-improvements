@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: F4 Improvements\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-18 10:37+0000\n"
+"POT-Creation-Date: 2021-03-18 10:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -71,7 +71,7 @@ msgstr ""
 msgid "Default Color Scheme"
 msgstr ""
 
-#: modules/System/Hooks.php:169
+#: modules/System/Hooks.php:178
 msgid "Disable Core Update Email"
 msgstr ""
 
@@ -79,7 +79,7 @@ msgstr ""
 msgid "Disable Gutenberg"
 msgstr ""
 
-#: modules/System/Hooks.php:184
+#: modules/System/Hooks.php:200
 msgid "Disable Theme Editor"
 msgstr ""
 
@@ -91,11 +91,11 @@ msgstr ""
 msgid "Disable WYSIWYG Media"
 msgstr ""
 
-#: modules/System/Hooks.php:177
+#: modules/System/Hooks.php:193
 msgid "Disable XML-RPC"
 msgstr ""
 
-#: modules/System/Hooks.php:119
+#: modules/System/Hooks.php:123
 msgid "E-mail"
 msgstr ""
 
@@ -276,11 +276,11 @@ msgstr ""
 msgid "Scripts and Stylesheets"
 msgstr ""
 
-#: modules/System/Hooks.php:114
+#: modules/System/Hooks.php:118
 msgid "Security"
 msgstr ""
 
-#: modules/System/Hooks.php:192
+#: modules/System/Hooks.php:208
 msgid "Set phpmailer return path"
 msgstr ""
 
@@ -296,15 +296,19 @@ msgstr ""
 msgid "Show toggle cache action"
 msgstr ""
 
+#: modules/System/Hooks.php:185
+msgid "Skip default plugins and themes on update"
+msgstr ""
+
 #: modules/Backend/Hooks.php:213
 msgid "Sunrise"
 msgstr ""
 
-#: modules/System/Hooks.php:93 modules/Plugins/WooCommerce/Hooks.php:92
+#: modules/System/Hooks.php:97 modules/Plugins/WooCommerce/Hooks.php:92
 msgid "System"
 msgstr ""
 
-#: modules/System/Hooks.php:109
+#: modules/System/Hooks.php:113
 msgid "Updates"
 msgstr ""
 

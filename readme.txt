@@ -5,7 +5,7 @@ Tags: improvements, enhancements, performance, security, frontend, backend, medi
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
-Stable tag: 1.3.3
+Stable tag: 1.4.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -118,6 +118,7 @@ Yes, absolutely!
 = 1.4.0 =
 * Add option to skip default plugins and themes on update
 * Add option to hide jumping embed loader in backend
+* Support WooCommerce 5.1
 
 = 1.3.3 =
 * Support WordPress 5.7

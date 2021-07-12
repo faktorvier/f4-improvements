@@ -69,6 +69,7 @@ There are a few features that really should be in the WordPress core. This plugi
 * Allow image upscaling (to ensure better image sizes handling)
 * Normalize Upload Filename (lowercase, whitespaces, umlauts etc.)
 * Use title as alt attribute on upload
+* Disable scaling for big image sizes
 * Remove specific default image sizes
 
 == Core ==
@@ -114,6 +115,9 @@ Yes, absolutely!
 6. WooCommerce improvements
 
 == Changelog ==
+
+= 1.5.0 =
+* Add option to disable scaling for big image sizes
 
 = 1.4.0 =
 * Add option to skip default plugins and themes on update

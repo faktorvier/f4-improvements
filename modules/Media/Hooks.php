@@ -82,6 +82,10 @@ class Hooks {
 			add_action('add_attachment', __NAMESPACE__ . '\\Hooks::add_alt_attribute_to_attachment');
 		}
 
+		if(Options::get('disable_big_image_size_threshold')) {
+			add_filter('big_image_size_threshold', '__return_false');
+		}
+
 		// if(Options::get('normalize_upload_title')) {
 		// 	add_action('add_attachment', __NAMESPACE__ . '\\Hooks::clean_upload_attachment_title');
 		// }
@@ -162,6 +166,11 @@ class Hooks {
 		// 	'type' => 'boolean'
 		// ];
 
+		$settings['disable_big_image_size_threshold'] = [
+			'default' => '0',
+			'type' => 'boolean'
+		];
+
 		$settings['remove_image_sizes'] = [
 			'default' => [],
 			'type' => 'array'
@@ -214,6 +223,13 @@ class Hooks {
 			'section' => 'media-library',
 			'type' => 'checkbox',
 			'label' => __('Use title as alt attribute on upload', 'f4-improvements')
+		];
+
+		$fields['disable_big_image_size_threshold'] = [
+			'tab' => 'media',
+			'section' => 'media-library',
+			'type' => 'checkbox',
+			'label' => __('Disable big image sizes scaling', 'f4-improvements')
 		];
 
 		// $fields['normalize_upload_title'] = [

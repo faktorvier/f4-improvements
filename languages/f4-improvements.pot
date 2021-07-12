@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: F4 Improvements\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-18 10:47+0000\n"
+"POT-Creation-Date: 2021-07-12 09:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "&mdash; Select &mdash;"
 msgstr ""
 
-#: modules/Media/Hooks.php:202
+#: modules/Media/Hooks.php:211
 msgid "Allow image upscaling"
 msgstr ""
 
@@ -35,7 +35,7 @@ msgstr ""
 msgid "Blue"
 msgstr ""
 
-#: modules/Media/Hooks.php:187
+#: modules/Media/Hooks.php:196
 msgid "Change JPEG Quality"
 msgstr ""
 
@@ -71,6 +71,10 @@ msgstr ""
 msgid "Default Color Scheme"
 msgstr ""
 
+#: modules/Media/Hooks.php:232
+msgid "Disable big image sizes scaling"
+msgstr ""
+
 #: modules/System/Hooks.php:178
 msgid "Disable Core Update Email"
 msgstr ""
@@ -103,7 +107,7 @@ msgstr ""
 msgid "Ectoplasm"
 msgstr ""
 
-#: modules/Media/Hooks.php:195
+#: modules/Media/Hooks.php:204
 msgid "Enable SVG Support"
 msgstr ""
 
@@ -164,11 +168,11 @@ msgstr ""
 msgid "Light"
 msgstr ""
 
-#: modules/Media/Hooks.php:106
+#: modules/Media/Hooks.php:110
 msgid "Media"
 msgstr ""
 
-#: modules/Media/Hooks.php:122
+#: modules/Media/Hooks.php:126
 msgid "Media Library"
 msgstr ""
 
@@ -184,7 +188,7 @@ msgstr ""
 msgid "Modern"
 msgstr ""
 
-#: modules/Media/Hooks.php:209
+#: modules/Media/Hooks.php:218
 msgid "Normalize Upload Filename"
 msgstr ""
 
@@ -220,7 +224,7 @@ msgstr ""
 msgid "Remove Adjacent Links"
 msgstr ""
 
-#: modules/Media/Hooks.php:230
+#: modules/Media/Hooks.php:246
 msgid "Remove default image sizes"
 msgstr ""
 
@@ -312,7 +316,7 @@ msgstr ""
 msgid "Updates"
 msgstr ""
 
-#: modules/Media/Hooks.php:216
+#: modules/Media/Hooks.php:225
 msgid "Use title as alt attribute on upload"
 msgstr ""
 

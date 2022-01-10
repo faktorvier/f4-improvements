@@ -37,6 +37,7 @@ class Hooks {
 		// Check if plugins are installed
 		define('F4_WPI_PLUGIN_ACTIVE_WPROCKET', defined('WP_ROCKET_VERSION'));
 		define('F4_WPI_PLUGIN_ACTIVE_WOOCOMMERCE', function_exists('WC'));
+		define('F4_WPI_PLUGIN_ACTIVE_YOASTSEO', defined('WPSEO_VERSION'));
 
 		// Init plugins improvements
 		if(F4_WPI_PLUGIN_ACTIVE_WPROCKET) {
@@ -45,6 +46,10 @@ class Hooks {
 
 		if(F4_WPI_PLUGIN_ACTIVE_WOOCOMMERCE) {
 			\F4\WPI\Plugins\WooCommerce\Hooks::init();
+		}
+
+		if(F4_WPI_PLUGIN_ACTIVE_YOASTSEO) {
+			\F4\WPI\Plugins\YoastSEO\Hooks::init();
 		}
 	}
 }

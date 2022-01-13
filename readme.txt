@@ -5,7 +5,7 @@ Tags: improvements, enhancements, performance, security, frontend, backend, medi
 Requires at least: 5.0
 Tested up to: 5.8
 Requires PHP: 7.0
-Stable tag: 1.5.0
+Stable tag: 1.6.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,9 @@ There are a few features that really should be in the WordPress core. This plugi
 * Hide flatrates if free shipping
 * Hide jumping embed loader in backend
 * Set reply to email
+
+== Yoast SEO ==
+* Choose image size for social og images
 
 == Front end ==
 
@@ -115,6 +118,10 @@ Yes, absolutely!
 6. WooCommerce improvements
 
 == Changelog ==
+
+= 1.6.0 =
+* Add Yoast SEO module and og image size option
+* Support WooCommerce 6.1
 
 = 1.5.0 =
 * Add option to disable scaling for big image sizes

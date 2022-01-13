@@ -4,7 +4,7 @@
 Plugin Name: F4 Improvements
 Plugin URI: https://github.com/faktorvier/f4-improvements
 Description: Improves a few things for WordPress.
-Version: 1.5.0
+Version: 1.6.0
 Author: FAKTOR VIER
 Author URI: https://www.faktorvier.ch
 License: GPLv2
@@ -12,7 +12,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: f4-improvements
 Domain Path: /languages/
 WC requires at least: 4.0
-WC tested up to: 5.1
+WC tested up to: 6.1
 
 This plugin is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -30,7 +30,7 @@ along with this plugin. If not, see https://www.gnu.org/licenses/gpl-2.0.html.
 
 if(!defined('ABSPATH')) exit;
 
-define('F4_WPI_VERSION', '1.5.0');
+define('F4_WPI_VERSION', '1.6.0');
 
 define('F4_WPI_SLUG', 'f4-improvements');
 define('F4_WPI_MAIN_FILE', __FILE__);

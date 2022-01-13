@@ -10,14 +10,14 @@ use F4\WPI\Core\Options\Helpers as Options;
  *
  * Hooks for the Plugins/YoastSEO module
  *
- * @since 1.3.0
+ * @since 1.6.0
  * @package F4\WPI\Plugins\YoastSEO
  */
 class Hooks {
 	/**
 	 * Initialize the hooks
 	 *
-	 * @since 1.3.0
+	 * @since 1.6.0
 	 * @access public
 	 * @static
 	 */
@@ -30,7 +30,7 @@ class Hooks {
 	/**
 	 * Fires once the module is loaded
 	 *
-	 * @since 1.3.0
+	 * @since 1.6.0
 	 * @access public
 	 * @static
 	 */
@@ -46,7 +46,7 @@ class Hooks {
 	/**
 	 * Sets the module default constants
 	 *
-	 * @since 1.3.0
+	 * @since 1.6.0
 	 * @access public
 	 * @static
 	 */
@@ -57,7 +57,7 @@ class Hooks {
 	/**
 	 * Register admin options tab
 	 *
-	 * @since 1.3.0
+	 * @since 1.6.0
 	 * @access public
 	 * @static
 	 */
@@ -72,7 +72,7 @@ class Hooks {
 	/**
 	 * Register admin options sections
 	 *
-	 * @since 1.3.0
+	 * @since 1.6.0
 	 * @access public
 	 * @static
 	 */
@@ -88,7 +88,7 @@ class Hooks {
 	/**
 	 * Register admin options
 	 *
-	 * @since 1.3.0
+	 * @since 1.6.0
 	 * @access public
 	 * @static
 	 */
@@ -104,7 +104,7 @@ class Hooks {
 	/**
 	 * Register admin options fields
 	 *
-	 * @since 1.3.0
+	 * @since 1.6.0
 	 * @access public
 	 * @static
 	 */
@@ -131,7 +131,7 @@ class Hooks {
 	/**
 	 * Fires after the module is loaded
 	 *
-	 * @since 1.3.0
+	 * @since 1.6.0
 	 * @access public
 	 * @static
 	 */
@@ -142,7 +142,7 @@ class Hooks {
 	/**
 	 * Save ship_to_different_address in session
 	 *
-	 * @since 1.3.0
+	 * @since 1.6.0
 	 * @access public
 	 * @static
 	 */

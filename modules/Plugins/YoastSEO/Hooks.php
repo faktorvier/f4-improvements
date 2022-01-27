@@ -39,8 +39,6 @@ class Hooks {
 		add_filter('F4/WPI/register_options_sections', __NAMESPACE__ . '\\Hooks::register_options_sections');
 		add_filter('F4/WPI/register_options_settings', __NAMESPACE__ . '\\Hooks::register_options_settings');
 		add_filter('F4/WPI/register_options_fields', __NAMESPACE__ . '\\Hooks::register_options_fields');
-
-		add_action('F4/WPI/after_update', __NAMESPACE__ . '\\Hooks::after_update');
 	}
 
 	/**
@@ -156,5 +154,3 @@ class Hooks {
 		return $image_size;
 	}
 }
-
-?>

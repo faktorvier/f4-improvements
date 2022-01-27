@@ -72,5 +72,3 @@ class Hooks {
 		load_plugin_textdomain('f4-improvements', false, plugin_basename(F4_WPI_PATH . 'languages') . '/');
 	}
 }
-
-?>

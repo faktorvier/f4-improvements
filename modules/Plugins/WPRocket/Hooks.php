@@ -475,5 +475,3 @@ class Hooks {
 		Helpers::clear_cache();
 	}
 }
-
-?>

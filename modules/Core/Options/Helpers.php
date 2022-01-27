@@ -90,5 +90,3 @@ class Helpers {
 		return get_option(F4_WPI_OPTION_PREFIX . $name, $default);
 	}
 }
-
-?>

@@ -266,5 +266,3 @@ class Hooks {
 		return $location;
 	}
 }
-
-?>

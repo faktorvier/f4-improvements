@@ -499,5 +499,3 @@ class Hooks {
 		return $sizes;
 	}
 }
-
-?>

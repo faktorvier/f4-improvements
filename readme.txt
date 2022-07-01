@@ -5,7 +5,7 @@ Tags: improvements, enhancements, performance, security, frontend, backend, medi
 Requires at least: 5.0
 Tested up to: 6.0
 Requires PHP: 7.0
-Stable tag: 1.6.3
+Stable tag: 1.7.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,6 +49,7 @@ There are a few features that really should be in the WordPress core. This plugi
 * Remove Emojis
 * Remove oEmbed Assets
 * Remove Gutenberg Assets
+* Remove Global Styles Assets
 * Hide Author Pages
 * Hide Admin Toolbar
 
@@ -118,6 +119,10 @@ Yes, absolutely!
 6. WooCommerce improvements
 
 == Changelog ==
+
+= 1.7.0 =
+* Add option to remove global styles from the front end
+* Support WooCommerce 6.6
 
 = 1.6.3 =
 * Support WordPress 6.0

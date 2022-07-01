@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: F4 Improvements\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-12 09:10+0000\n"
+"POT-Creation-Date: 2022-07-01 15:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -63,7 +63,7 @@ msgstr ""
 msgid "Deactivate cart fragments cache"
 msgstr ""
 
-#: modules/Backend/Hooks.php:205
+#: modules/Backend/Hooks.php:205 modules/Plugins/YoastSEO/Hooks.php:111
 msgid "Default"
 msgstr ""
 
@@ -115,7 +115,11 @@ msgstr ""
 msgid "F4 Improvements"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:127 modules/Plugins/WooCommerce/Hooks.php:82
+#. Author of the plugin
+msgid "FAKTOR VIER"
+msgstr ""
+
+#: modules/Frontend/Hooks.php:132 modules/Plugins/WooCommerce/Hooks.php:82
 msgid "Front end"
 msgstr ""
 
@@ -123,11 +127,11 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:334
+#: modules/Frontend/Hooks.php:351
 msgid "Hide Admin Toolbar"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:327
+#: modules/Frontend/Hooks.php:344
 msgid "Hide Author Pages"
 msgstr ""
 
@@ -139,8 +143,20 @@ msgstr ""
 msgid "Hide jumping notices loader"
 msgstr ""
 
+#. URI of the plugin
+msgid "https://github.com/faktorvier/f4-improvements"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.faktorvier.ch"
+msgstr ""
+
 #: modules/Plugins/WPRocket/Hooks.php:195
 msgid "Ignore Query Strings"
+msgstr ""
+
+#: modules/Plugins/YoastSEO/Hooks.php:122
+msgid "Image size for Open Graph"
 msgstr ""
 
 #: modules/Core/Options/Hooks.php:96
@@ -176,7 +192,7 @@ msgstr ""
 msgid "Media Library"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:143
+#: modules/Frontend/Hooks.php:148
 msgid "Meta Tags"
 msgstr ""
 
@@ -196,7 +212,7 @@ msgstr ""
 msgid "Ocean"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:153
+#: modules/Frontend/Hooks.php:158
 msgid "Pages"
 msgstr ""
 
@@ -220,7 +236,7 @@ msgstr ""
 msgid "Remove \"Welcome to WP!\""
 msgstr ""
 
-#: modules/Frontend/Hooks.php:283 modules/Plugins/WooCommerce/Hooks.php:157
+#: modules/Frontend/Hooks.php:293 modules/Plugins/WooCommerce/Hooks.php:157
 msgid "Remove Adjacent Links"
 msgstr ""
 
@@ -228,11 +244,11 @@ msgstr ""
 msgid "Remove default image sizes"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:305
+#: modules/Frontend/Hooks.php:315
 msgid "Remove Emojis"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:290
+#: modules/Frontend/Hooks.php:300
 msgid "Remove Feed Links"
 msgstr ""
 
@@ -240,35 +256,39 @@ msgstr ""
 msgid "Remove Footprint Comment"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:297
+#: modules/Frontend/Hooks.php:307
 msgid "Remove Generator Tag"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:319
+#: modules/Frontend/Hooks.php:336
+msgid "Remove Global Styles Assets"
+msgstr ""
+
+#: modules/Frontend/Hooks.php:329
 msgid "Remove Gutenberg Assets"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:312
+#: modules/Frontend/Hooks.php:322
 msgid "Remove oEmbed Assets"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:262
+#: modules/Frontend/Hooks.php:272
 msgid "Remove oEmbed Discovery"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:255
+#: modules/Frontend/Hooks.php:265
 msgid "Remove REST Output"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:248
+#: modules/Frontend/Hooks.php:258
 msgid "Remove RSD Link"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:276
+#: modules/Frontend/Hooks.php:286
 msgid "Remove Shortlinks"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:269
+#: modules/Frontend/Hooks.php:279
 msgid "Remove wlwmanifest Link"
 msgstr ""
 
@@ -276,7 +296,7 @@ msgstr ""
 msgid "Save ship_to_different_address"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:148
+#: modules/Frontend/Hooks.php:153
 msgid "Scripts and Stylesheets"
 msgstr ""
 
@@ -304,6 +324,10 @@ msgstr ""
 msgid "Skip default plugins and themes on update"
 msgstr ""
 
+#: modules/Plugins/YoastSEO/Hooks.php:80
+msgid "Social"
+msgstr ""
+
 #: modules/Backend/Hooks.php:213
 msgid "Sunrise"
 msgstr ""
@@ -327,4 +351,8 @@ msgstr ""
 
 #: modules/Plugins/WPRocket/Hooks.php:66
 msgid "WP Rocket"
+msgstr ""
+
+#: modules/Plugins/YoastSEO/Hooks.php:64
+msgid "Yoast SEO"
 msgstr ""

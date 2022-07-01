@@ -106,6 +106,11 @@ class Hooks {
 			remove_action('wp_enqueue_scripts', 'wp_common_block_scripts_and_styles');
 		}
 
+		if(Options::get('remove_global_styles_assets')) {
+			remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
+			remove_action('wp_footer', 'wp_enqueue_global_styles', 1);
+		}
+
 		if(Options::get('hide_author_page')) {
 			add_action('template_redirect', __NAMESPACE__ . '\\Hooks::hide_author_page');
 		}
@@ -219,6 +224,11 @@ class Hooks {
 			'type' => 'boolean'
 		];
 
+		$settings['remove_global_styles_assets'] = [
+			'default' => '0',
+			'type' => 'boolean'
+		];
+
 		$settings['hide_author_page'] = [
 			'default' => '0',
 			'type' => 'boolean'
@@ -317,6 +327,13 @@ class Hooks {
 			'section' => 'frontend-scripts-styles',
 			'type' => 'checkbox',
 			'label' => __('Remove Gutenberg Assets', 'f4-improvements')
+		];
+
+		$fields['remove_global_styles_assets'] = [
+			'tab' => 'frontend',
+			'section' => 'frontend-scripts-styles',
+			'type' => 'checkbox',
+			'label' => __('Remove Global Styles Assets', 'f4-improvements')
 		];
 
 		// Register pages fields

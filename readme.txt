@@ -5,7 +5,7 @@ Tags: improvements, enhancements, performance, security, frontend, backend, medi
 Requires at least: 5.0
 Tested up to: 6.0
 Requires PHP: 7.0
-Stable tag: 1.7.0
+Stable tag: 1.7.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ This plugin adds a lot of improvements and enhancements for WordPress and WP Roc
 
 == Description ==
 
-There are a few features that really should be in the WordPress core. This plugin adds a few more features and a lot of improvements and enhancements to your WordPress installation. They improve the performance for your WordPress, make it more secure, add a few useful new features, removes unimportant stuff and ensure better usability. It also adds some improvements for the awesome caching plugin WP Rocket and WooCommerce.
+There are a few features that really should be in the WordPress core. [F4 Improvements](https://www.f4dev.ch) adds a few more features and a lot of improvements and enhancements to your WordPress installation. They improve the performance for your WordPress, make it more secure, add a few useful new features, removes unimportant stuff and ensure better usability. It also adds some improvements for the awesome caching plugin WP Rocket and WooCommerce.
 
 = Features =
 
@@ -119,6 +119,10 @@ Yes, absolutely!
 6. WooCommerce improvements
 
 == Changelog ==
+
+= 1.7.1 =
+* Update www.f4dev.ch links
+* Support WooCommerce 6.8
 
 = 1.7.0 =
 * Add option to remove global styles from the front end

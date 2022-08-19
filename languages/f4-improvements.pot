@@ -148,7 +148,7 @@ msgid "https://github.com/faktorvier/f4-improvements"
 msgstr ""
 
 #. Author URI of the plugin
-msgid "https://www.faktorvier.ch"
+msgid "https://www.f4dev.ch"
 msgstr ""
 
 #: modules/Plugins/WPRocket/Hooks.php:195

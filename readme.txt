@@ -5,7 +5,7 @@ Tags: improvements, enhancements, performance, security, frontend, backend, medi
 Requires at least: 5.0
 Tested up to: 6.1
 Requires PHP: 7.0
-Stable tag: 1.7.2
+Stable tag: 1.7.3
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +119,10 @@ Yes, absolutely!
 6. WooCommerce improvements
 
 == Changelog ==
+
+= 1.7.3 =
+* Optimize for PHP 8.1
+* Support WooCommerce 7.4
 
 = 1.7.2 =
 * Support WooCommerce 7.1

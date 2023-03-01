@@ -67,9 +67,8 @@ class Helpers {
 
 		$return = self::$settings;
 
-		$name = str_replace(F4_WPI_OPTION_PREFIX, '', $name);
-
 		if($name) {
+			$name = str_replace(F4_WPI_OPTION_PREFIX, '', $name);
 			$return = self::$settings[$name] ?? null;
 		}
 

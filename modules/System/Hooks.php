@@ -83,6 +83,10 @@ class Hooks {
 				$phpmailer->Sender = $phpmailer->From;
 			});
 		}
+
+		if(Options::get('disable_admin_email_check')) {
+			add_filter('admin_email_check_interval', '__return_false');
+		}
 	}
 
 	/**
@@ -159,6 +163,11 @@ class Hooks {
 			'type' => 'boolean'
 		];
 
+		$settings['disable_admin_email_check'] = [
+			'default' => '0',
+			'type' => 'boolean'
+		];
+
 		return $settings;
 	}
 
@@ -206,6 +215,13 @@ class Hooks {
 			'section' => 'system-email',
 			'type' => 'checkbox',
 			'label' => __('Set phpmailer return path', 'f4-improvements')
+		];
+
+		$fields['disable_admin_email_check'] = [
+			'tab' => 'system',
+			'section' => 'system-email',
+			'type' => 'checkbox',
+			'label' => __('Disable admin email check', 'f4-improvements')
 		];
 
 		return $fields;

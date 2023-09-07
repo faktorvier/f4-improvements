@@ -35,6 +35,8 @@ class Hooks {
 	 * @static
 	 */
 	public static function loaded() {
+		add_action('before_woocommerce_init', __NAMESPACE__ . '\\Hooks::declare_woocommerce_compatibilities');
+
 		add_filter('F4/WPI/register_options_tabs', __NAMESPACE__ . '\\Hooks::register_options_tabs', 50);
 		add_filter('F4/WPI/register_options_sections', __NAMESPACE__ . '\\Hooks::register_options_sections');
 		add_filter('F4/WPI/register_options_settings', __NAMESPACE__ . '\\Hooks::register_options_settings');
@@ -214,6 +216,20 @@ class Hooks {
 		// System
 		if(Options::get('wc_set_reply_to_email')) {
 			add_filter('woocommerce_email_headers', __NAMESPACE__ . '\\Hooks::set_reply_to_email_address', 99, 4);
+		}
+	}
+
+	/**
+	 * Declare WooCommerce compatibilities.
+	 *
+	 * @since 1.8.0
+	 * @access public
+	 * @static
+	 */
+	public static function declare_woocommerce_compatibilities() {
+		if(class_exists(\Automattic\WooCommerce\Utilities\FeaturesUtil::class)) {
+			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility('custom_order_tables', F4_WPI_MAIN_FILE, true);
+			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility('product_block_editor', F4_WPI_MAIN_FILE, true);
 		}
 	}
 

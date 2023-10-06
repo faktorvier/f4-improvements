@@ -3,9 +3,9 @@ Contributors: faktorvier
 Donate link: https://www.faktorvier.ch/donate/
 Tags: improvements, enhancements, performance, security, frontend, backend, media, wp rocket
 Requires at least: 5.0
-Tested up to: 6.1
+Tested up to: 6.3
 Requires PHP: 7.0
-Stable tag: 1.7.3
+Stable tag: 1.8.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,6 +83,7 @@ There are a few features that really should be in the WordPress core. [F4 Improv
 * Disable XML-RPC
 * Disable Theme Editor
 * Set phpmailer return path
+* Disable admin email check
 
 = Features overview =
 
@@ -119,6 +120,12 @@ Yes, absolutely!
 6. WooCommerce improvements
 
 == Changelog ==
+
+= 1.8.0 =
+* Add option to disable admin email check
+* Declare custom_order_tables compatibility
+* Support WooCommerce 8.1
+* Support WordPress 6.3
 
 = 1.7.3 =
 * Optimize for PHP 8.1

@@ -10,9 +10,9 @@ use F4\WPI\Core\Options\Helpers as Options;
 		<label for="<?php echo $args['field_name'] . '-' . $option_value; ?>">
 			<input
 				type="checkbox"
-				name="<?php echo $args['field_name']; ?>[]"
-				id="<?php echo $args['field_name'] . '-' . $option_value; ?>"
-				value="<?php echo $option_value; ?>"
+				name="<?php echo esc_attr($args['field_name']); ?>[]"
+				id="<?php echo esc_attr($args['field_name'] . '-' . $option_value); ?>"
+				value="<?php echo esc_attr($option_value); ?>"
 				<?php checked(in_array($option_value, Options::get($args['option_name']))); ?>
 			/>
 

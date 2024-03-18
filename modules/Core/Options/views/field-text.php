@@ -11,9 +11,9 @@ $args['field'] = wp_parse_args($args['field'], [
 
 <input
 	type="text"
-	name="<?php echo $args['field_name']; ?>"
-	id="<?php echo $args['field_name']; ?>"
-	value="<?php echo Options::get($args['option_name']); ?>"
+	name="<?php echo esc_attr($args['field_name']); ?>"
+	id="<?php echo esc_attr($args['field_name']); ?>"
+	value="<?php echo esc_attr(Options::get($args['option_name'])); ?>"
 	class="regular-text"
-	placeholder="<?php echo $args['field']['placeholder']; ?>"
+	placeholder="<?php echo esc_attr($args['field']['placeholder']); ?>"
 />

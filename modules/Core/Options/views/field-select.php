@@ -6,8 +6,8 @@ use F4\WPI\Core\Options\Helpers as Options;
 ?>
 
 <select
-	name="<?php echo $args['field_name']; ?>"
-	id="<?php echo $args['field_name']; ?>"
+	name="<?php echo esc_attr($args['field_name']); ?>"
+	id="<?php echo esc_attr($args['field_name']); ?>"
 >
 	<?php foreach($args['field']['options'] as $option_value => $option_name): ?>
 		<option

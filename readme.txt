@@ -3,9 +3,9 @@ Contributors: faktorvier
 Donate link: https://www.faktorvier.ch/donate/
 Tags: improvements, enhancements, performance, security, frontend, backend, media, wp rocket
 Requires at least: 5.0
-Tested up to: 6.3
+Tested up to: 6.4
 Requires PHP: 7.0
-Stable tag: 1.8.0
+Stable tag: 1.8.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -120,6 +120,11 @@ Yes, absolutely!
 6. WooCommerce improvements
 
 == Changelog ==
+
+= 1.8.1 =
+* Fix possible XSS vulnerability
+* Support WooCommerce 8.6
+* Support WordPress 6.4
 
 = 1.8.0 =
 * Add option to disable admin email check

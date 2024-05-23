@@ -5,7 +5,7 @@ Tags: improvements, enhancements, performance, security, frontend, backend, medi
 Requires at least: 5.0
 Tested up to: 6.5
 Requires PHP: 7.0
-Stable tag: 1.8.2
+Stable tag: 1.9.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,7 @@ There are a few features that really should be in the WordPress core. [F4 Improv
 == WP Rocket ==
 * Add action to toggle caching on/off to the WP Rocket admin menu
 * Enable same cache for all users
+* Disable mobile-specific cache (WP Rocket >= 3.16)
 * Remove WP Rocket footprint comment
 * Leave empty lines in .htaccess
 * Ignore additional query strings
@@ -120,6 +121,10 @@ Yes, absolutely!
 6. WooCommerce improvements
 
 == Changelog ==
+
+= 1.9.0 =
+* Add option to disable mobile-specific cache for WP Rocket
+* Support WooCommerce 8.9
 
 = 1.8.2 =
 * Support WooCommerce 8.7

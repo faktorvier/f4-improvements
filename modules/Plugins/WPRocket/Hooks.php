@@ -111,6 +111,13 @@ class Hooks {
 			'type' => 'boolean'
 		];
 
+		if(version_compare(\WP_ROCKET_VERSION, '3.16', '>=')) {
+			$settings['wprocket_disable_separate_mobile_cache'] = [
+				'default' => '0',
+				'type' => 'boolean'
+			];
+		}
+
 		$settings['wprocket_remove_footprint'] = [
 			'default' => '0',
 			'type' => 'boolean'
@@ -172,6 +179,15 @@ class Hooks {
 			'type' => 'checkbox',
 			'label' => __('Common Cache for all Users', 'f4-improvements')
 		];
+
+		if(version_compare(\WP_ROCKET_VERSION, '3.16', '>=')) {
+			$fields['wprocket_disable_separate_mobile_cache'] = [
+				'tab' => 'wprocket',
+				'section' => 'wprocket-general',
+				'type' => 'checkbox',
+				'label' => __('Disable mobile-specific cache', 'f4-improvements')
+			];
+		}
 
 		$fields['wprocket_remove_footprint'] = [
 			'tab' => 'wprocket',
@@ -243,6 +259,10 @@ class Hooks {
 			add_filter('rocket_common_cache_logged_users', '__return_true');
 		}
 
+		if(Options::get('wprocket_disable_separate_mobile_cache') && version_compare(\WP_ROCKET_VERSION, '3.16', '>=')) {
+			add_filter('rocket_above_the_fold_optimization', __NAMESPACE__ . '\\Hooks::disable_above_the_fold_optimization');
+		}
+
 		if(!defined('WP_ROCKET_WHITE_LABEL_FOOTPRINT') && Options::get('wprocket_remove_footprint')) {
 			define('WP_ROCKET_WHITE_LABEL_FOOTPRINT', false);
 		}
@@ -275,6 +295,18 @@ class Hooks {
 	 */
 	public static function disable_assets_minify($minify_url, $original_url) {
 		return $original_url;
+	}
+
+	/**
+	 * Disable above the fold optimizations if mobile-specific cache is diabled.
+	 *
+	 * @since 1.9.0
+	 * @access public
+	 * @static
+	 */
+	public static function disable_above_the_fold_optimization($enabled) {
+		$options = get_option('wp_rocket_settings', []);
+		return $enabled && isset($options['do_caching_mobile_files'], $options['cache_mobile']) && $options['do_caching_mobile_files'] == 1 && $options['cache_mobile'] == 1;
 	}
 
 	/**
@@ -425,6 +457,12 @@ class Hooks {
 				add_filter('rocket_common_cache_logged_users', '__return_false');
 			}
 
+			if(Options::get('wprocket_disable_separate_mobile_cache')) {
+				Helpers::toggle_mobile_specific_cache(false);
+			} else {
+				Helpers::toggle_mobile_specific_cache(true);
+			}
+
 			if(Options::get('wprocket_wc_deactivate_cart_fragments_cache')) {
 				add_filter('rocket_cache_wc_empty_cart', '__return_false');
 			} else {
@@ -448,6 +486,7 @@ class Hooks {
 			add_filter('rocket_common_cache_logged_users', '__return_false');
 			add_filter('rocket_cache_wc_empty_cart', '__return_true');
 
+			Helpers::toggle_mobile_specific_cache(true);
 			Helpers::clear_cache();
 		}
 	}
@@ -464,6 +503,12 @@ class Hooks {
 			add_filter('rocket_common_cache_logged_users', '__return_true');
 		} else {
 			add_filter('rocket_common_cache_logged_users', '__return_false');
+		}
+
+		if(Options::get('wprocket_disable_separate_mobile_cache')) {
+			Helpers::toggle_mobile_specific_cache(false);
+		} else {
+			Helpers::toggle_mobile_specific_cache(true);
 		}
 
 		if(Options::get('wprocket_wc_deactivate_cart_fragments_cache')) {

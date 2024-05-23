@@ -59,4 +59,22 @@ class Helpers {
 		rocket_dismiss_box('rocket_warning_plugin_modification');
 		 */
 	}
+
+	/**
+	 * Toggle mobile-specific cache.
+	 *
+	 * @since 1.9.0
+	 * @access public
+	 * @static
+	 */
+	public static function toggle_mobile_specific_cache($enabled) {
+		if(version_compare(\WP_ROCKET_VERSION, '3.16', '<')) {
+			return;
+		}
+
+		$_POST['wpr_test'] = 1;
+		$options = get_option('wp_rocket_settings', []);
+		$options['do_caching_mobile_files'] = $enabled ? 1 : 0;
+		update_option('wp_rocket_settings', $options);
+	}
 }

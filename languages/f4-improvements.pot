@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: F4 Improvements\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-01 15:26+0000\n"
+"POT-Creation-Date: 2024-05-23 11:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "Appearance"
 msgstr ""
 
-#: modules/Backend/Hooks.php:88 modules/Plugins/WooCommerce/Hooks.php:87
+#: modules/Backend/Hooks.php:88 modules/Plugins/WooCommerce/Hooks.php:89
 msgid "Back end"
 msgstr ""
 
@@ -39,7 +39,7 @@ msgstr ""
 msgid "Change JPEG Quality"
 msgstr ""
 
-#: modules/Plugins/WPRocket/Hooks.php:204
+#: modules/Plugins/WPRocket/Hooks.php:220
 msgid "Clean post cache after stock change"
 msgstr ""
 
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Coffee"
 msgstr ""
 
-#: modules/Plugins/WPRocket/Hooks.php:173
+#: modules/Plugins/WPRocket/Hooks.php:180
 msgid "Common Cache for all Users"
 msgstr ""
 
@@ -59,7 +59,7 @@ msgstr ""
 msgid "Dashboard"
 msgstr ""
 
-#: modules/Plugins/WPRocket/Hooks.php:211
+#: modules/Plugins/WPRocket/Hooks.php:227
 msgid "Deactivate cart fragments cache"
 msgstr ""
 
@@ -71,11 +71,15 @@ msgstr ""
 msgid "Default Color Scheme"
 msgstr ""
 
+#: modules/System/Hooks.php:224
+msgid "Disable admin email check"
+msgstr ""
+
 #: modules/Media/Hooks.php:232
 msgid "Disable big image sizes scaling"
 msgstr ""
 
-#: modules/System/Hooks.php:178
+#: modules/System/Hooks.php:187
 msgid "Disable Core Update Email"
 msgstr ""
 
@@ -83,7 +87,11 @@ msgstr ""
 msgid "Disable Gutenberg"
 msgstr ""
 
-#: modules/System/Hooks.php:200
+#: modules/Plugins/WPRocket/Hooks.php:188
+msgid "Disable mobile-specific cache"
+msgstr ""
+
+#: modules/System/Hooks.php:209
 msgid "Disable Theme Editor"
 msgstr ""
 
@@ -95,11 +103,11 @@ msgstr ""
 msgid "Disable WYSIWYG Media"
 msgstr ""
 
-#: modules/System/Hooks.php:193
+#: modules/System/Hooks.php:202
 msgid "Disable XML-RPC"
 msgstr ""
 
-#: modules/System/Hooks.php:123
+#: modules/System/Hooks.php:127
 msgid "E-mail"
 msgstr ""
 
@@ -119,7 +127,7 @@ msgstr ""
 msgid "FAKTOR VIER"
 msgstr ""
 
-#: modules/Frontend/Hooks.php:132 modules/Plugins/WooCommerce/Hooks.php:82
+#: modules/Frontend/Hooks.php:132 modules/Plugins/WooCommerce/Hooks.php:84
 msgid "Front end"
 msgstr ""
 
@@ -135,11 +143,11 @@ msgstr ""
 msgid "Hide Author Pages"
 msgstr ""
 
-#: modules/Plugins/WooCommerce/Hooks.php:164
+#: modules/Plugins/WooCommerce/Hooks.php:166
 msgid "Hide flat rates if free shipping"
 msgstr ""
 
-#: modules/Plugins/WooCommerce/Hooks.php:172
+#: modules/Plugins/WooCommerce/Hooks.php:174
 msgid "Hide jumping notices loader"
 msgstr ""
 
@@ -151,7 +159,7 @@ msgstr ""
 msgid "https://www.f4dev.ch"
 msgstr ""
 
-#: modules/Plugins/WPRocket/Hooks.php:195
+#: modules/Plugins/WPRocket/Hooks.php:211
 msgid "Ignore Query Strings"
 msgstr ""
 
@@ -176,7 +184,7 @@ msgstr ""
 msgid "Keep Taxonomy Checklist Hierarchy"
 msgstr ""
 
-#: modules/Plugins/WPRocket/Hooks.php:187
+#: modules/Plugins/WPRocket/Hooks.php:203
 msgid "Leave empty Lines in .htaccess"
 msgstr ""
 
@@ -236,7 +244,7 @@ msgstr ""
 msgid "Remove \"Welcome to WP!\""
 msgstr ""
 
-#: modules/Frontend/Hooks.php:293 modules/Plugins/WooCommerce/Hooks.php:157
+#: modules/Frontend/Hooks.php:293 modules/Plugins/WooCommerce/Hooks.php:159
 msgid "Remove Adjacent Links"
 msgstr ""
 
@@ -252,7 +260,7 @@ msgstr ""
 msgid "Remove Feed Links"
 msgstr ""
 
-#: modules/Plugins/WPRocket/Hooks.php:180
+#: modules/Plugins/WPRocket/Hooks.php:196
 msgid "Remove Footprint Comment"
 msgstr ""
 
@@ -292,7 +300,7 @@ msgstr ""
 msgid "Remove wlwmanifest Link"
 msgstr ""
 
-#: modules/Plugins/WooCommerce/Hooks.php:150
+#: modules/Plugins/WooCommerce/Hooks.php:152
 msgid "Save ship_to_different_address"
 msgstr ""
 
@@ -300,15 +308,15 @@ msgstr ""
 msgid "Scripts and Stylesheets"
 msgstr ""
 
-#: modules/System/Hooks.php:118
+#: modules/System/Hooks.php:122
 msgid "Security"
 msgstr ""
 
-#: modules/System/Hooks.php:208
+#: modules/System/Hooks.php:217
 msgid "Set phpmailer return path"
 msgstr ""
 
-#: modules/Plugins/WooCommerce/Hooks.php:180
+#: modules/Plugins/WooCommerce/Hooks.php:182
 msgid "Set reply to email"
 msgstr ""
 
@@ -316,11 +324,11 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: modules/Plugins/WPRocket/Hooks.php:166
+#: modules/Plugins/WPRocket/Hooks.php:173
 msgid "Show toggle cache action"
 msgstr ""
 
-#: modules/System/Hooks.php:185
+#: modules/System/Hooks.php:194
 msgid "Skip default plugins and themes on update"
 msgstr ""
 
@@ -332,11 +340,11 @@ msgstr ""
 msgid "Sunrise"
 msgstr ""
 
-#: modules/System/Hooks.php:97 modules/Plugins/WooCommerce/Hooks.php:92
+#: modules/System/Hooks.php:101 modules/Plugins/WooCommerce/Hooks.php:94
 msgid "System"
 msgstr ""
 
-#: modules/System/Hooks.php:113
+#: modules/System/Hooks.php:117
 msgid "Updates"
 msgstr ""
 
@@ -345,7 +353,7 @@ msgid "Use title as alt attribute on upload"
 msgstr ""
 
 #: modules/Plugins/WPRocket/Hooks.php:88
-#: modules/Plugins/WooCommerce/Hooks.php:66
+#: modules/Plugins/WooCommerce/Hooks.php:68
 msgid "WooCommerce"
 msgstr ""
 

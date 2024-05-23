@@ -1,7 +1,7 @@
 === F4 Improvements ===
 Contributors: faktorvier
 Donate link: https://www.faktorvier.ch/donate/
-Tags: improvements, enhancements, performance, security, frontend, backend, media, wp rocket
+Tags: improvements, enhancements, performance, security, frontend
 Requires at least: 5.0
 Tested up to: 6.5
 Requires PHP: 7.0

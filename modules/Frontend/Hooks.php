@@ -104,6 +104,7 @@ class Hooks {
 
 		if(Options::get('remove_gutenberg_assets')) {
 			remove_action('wp_enqueue_scripts', 'wp_common_block_scripts_and_styles');
+			remove_action('wp_enqueue_scripts', 'wp_enqueue_classic_theme_styles');
 		}
 
 		if(Options::get('remove_global_styles_assets')) {
